@@ -1,0 +1,52 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "hinglish-rag-probe"
+version = "0.1.0"
+description = "Reproducible retrieval robustness evaluation for Hindi, English and Hinglish"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+dependencies = ["numpy>=1.24", "scikit-learn>=1.3", "PyYAML>=6"]
+classifiers = ["Programming Language :: Python :: 3", "Topic :: Scientific/Engineering :: Artificial Intelligence"]
+
+[project.urls]
+Repository = "https://github.com/Shivain-codes/hinglish-rag-probe"
+Issues = "https://github.com/Shivain-codes/hinglish-rag-probe/issues"
+
+[project.optional-dependencies]
+dense = ["sentence-transformers>=3.0"]
+faiss = ["faiss-cpu>=1.8"]
+reports = ["matplotlib>=3.8"]
+dev = ["pytest>=8", "pytest-cov>=5", "ruff>=0.9", "mypy>=1.13", "types-PyYAML", "build>=1.2", "twine>=6", "pip-audit>=2.7"]
+
+[project.scripts]
+hragprobe = "hinglish_rag_probe.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/hinglish_rag_probe"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.mypy]
+python_version = "3.10"
+check_untyped_defs = true
+disallow_untyped_defs = true
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["model_download: requires explicit HRAG_TEST_MODEL and optional dense dependencies"]
+
+[tool.coverage.run]
+source = ["hinglish_rag_probe"]
+[tool.coverage.report]
+show_missing = true
+fail_under = 85

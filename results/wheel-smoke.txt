@@ -1,0 +1,15 @@
+usage: hragprobe [-h] {evaluate,compare,perturb,report} ...
+
+Evaluate multilingual retrieval robustness
+
+positional arguments:
+  {evaluate,compare,perturb,report}
+    evaluate            Evaluate CSV/JSON/JSONL documents and queries
+    compare             Run reproducible YAML experiment; paths relative to
+                        config
+    perturb             Append seeded, unvalidated query variants
+    report              Create self-contained HTML and SVG/PDF/PNG figures
+
+options:
+  -h, --help            show this help message and exit
+Fresh wheel API and CLI passed; torch and FAISS absent.

@@ -1,0 +1,5733 @@
+{
+  "reports": {
+    "tfidf": {
+      "metadata": {
+        "python": "3.11.15 (main, Mar 20 2026, 00:41:54) [Clang 22.1.1 ]",
+        "dependencies": {
+          "hinglish-rag-probe": "0.1.0",
+          "numpy": "2.4.6",
+          "scikit-learn": "1.9.1",
+          "PyYAML": "6.0.3",
+          "matplotlib": "3.11.2"
+        },
+        "platform": "macOS-15.7.4-arm64-arm-64bit",
+        "machine": "arm64",
+        "processor": "arm",
+        "thread_environment": {
+          "OMP_NUM_THREADS": null,
+          "MKL_NUM_THREADS": null,
+          "OPENBLAS_NUM_THREADS": null
+        },
+        "timestamp_utc": "2026-10-27T05:39:39.205405+00:00",
+        "schema_version": 1,
+        "k": 3,
+        "seed": 42,
+        "retriever": {
+          "name": "tfidf",
+          "tokenizer": "unicode_NFC_casefold_v1",
+          "norm": "l2"
+        },
+        "dataset": {
+          "name": "HinglishRAGProbe synthetic demonstration",
+          "source": "Generated locally for software validation; no external corpus",
+          "license": "MIT (bundled example data)",
+          "version": "1",
+          "synthetic": true,
+          "human_reviewed": false,
+          "relevance_definition": "One positive document per query, assigned while constructing the synthetic example; other documents treated as nonrelevant."
+        },
+        "dataset_sha256": "b823e8823374b8144418c95cb2e3ab0ba6caad74767420372137d4a9237ab728",
+        "n_documents": 12,
+        "n_queries": 8,
+        "index_seconds": 0.01104325003689155,
+        "peak_python_allocated_bytes": 190510,
+        "memory_scope": "tracemalloc Python allocations during index and search; excludes most native/GPU memory; null if tracing already active",
+        "timing_scope": "sequential queries, cold first query included, indexing excluded, tracemalloc enabled",
+        "judgment_policy": "missing excluded, judged-empty zero, unjudged documents nonrelevant",
+        "statistics": {
+          "unit": "original query",
+          "confidence": 0.95,
+          "resamples": 1000,
+          "permutations": 1000,
+          "multiplicity": "unadjusted exploratory"
+        }
+      },
+      "results": [
+        {
+          "query_id": "q1",
+          "condition": "english",
+          "text": "How does photosynthesis work?",
+          "variant": {
+            "condition": "english",
+            "text": "How does photosynthesis work?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d1",
+              "score": 0.372350467337149
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            },
+            {
+              "id": "d11",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 0.0012554999557323754,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q1",
+          "condition": "hindi",
+          "text": "प्रकाश संश्लेषण कैसे काम करता है?",
+          "variant": {
+            "condition": "hindi",
+            "text": "प्रकाश संश्लेषण कैसे काम करता है?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            },
+            {
+              "id": "d11",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 0.0007384579512290657,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q1",
+          "condition": "romanized_hindi",
+          "text": "prakash sanshleshan kaise kaam karta hai?",
+          "variant": {
+            "condition": "romanized_hindi",
+            "text": "prakash sanshleshan kaise kaam karta hai?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            },
+            {
+              "id": "d11",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 0.0007293340167962015,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q1",
+          "condition": "hinglish",
+          "text": "Photosynthesis kaise kaam karta hai?",
+          "variant": {
+            "condition": "hinglish",
+            "text": "Photosynthesis kaise kaam karta hai?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d1",
+              "score": 0.372350467337149
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            },
+            {
+              "id": "d11",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 0.0007171250181272626,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q1",
+          "condition": "english_typo",
+          "text": "How vdoes hotosynthesis wgrk?",
+          "variant": {
+            "condition": "english_typo",
+            "text": "How vdoes hotosynthesis wgrk?",
+            "human_validated": false,
+            "transformation": "typo",
+            "settings": {
+              "seed": 42,
+              "intensity": 0.15,
+              "source_condition": "english",
+              "alphabet": "abcdefghijklmnopqrstuvwxyz",
+              "original_query_id": "q1",
+              "original_text": "How does photosynthesis work?",
+              "algorithm": "codepoint_v1"
+            }
+          },
+          "ranking": [
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            },
+            {
+              "id": "d11",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 0.0006934580160304904,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q1",
+          "condition": "hinglish_typo",
+          "text": "Phtosynthess kaise kaam kaxat hai?",
+          "variant": {
+            "condition": "hinglish_typo",
+            "text": "Phtosynthess kaise kaam kaxat hai?",
+            "human_validated": false,
+            "transformation": "typo",
+            "settings": {
+              "seed": 42,
+              "intensity": 0.15,
+              "source_condition": "hinglish",
+              "alphabet": "abcdefghijklmnopqrstuvwxyz",
+              "original_query_id": "q1",
+              "original_text": "Photosynthesis kaise kaam karta hai?",
+              "algorithm": "codepoint_v1"
+            }
+          },
+          "ranking": [
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            },
+            {
+              "id": "d11",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 0.000697834009770304,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q2",
+          "condition": "english",
+          "text": "What does machine learning do?",
+          "variant": {
+            "condition": "english",
+            "text": "What does machine learning do?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d2",
+              "score": 0.5229553609472071
+            },
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 0.0007309590000659227,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q2",
+          "condition": "hindi",
+          "text": "मशीन लर्निंग क्या करती है?",
+          "variant": {
+            "condition": "hindi",
+            "text": "मशीन लर्निंग क्या करती है?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            },
+            {
+              "id": "d11",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "hit_rate": 0.0,
+            "mrr": 0.0,
+            "map": 0.0,
+            "ndcg": 0.0
+          },
+          "latency_seconds": 0.0007056249887682498,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q2",
+          "condition": "romanized_hindi",
+          "text": "machine learning kya karti hai?",
+          "variant": {
+            "condition": "romanized_hindi",
+            "text": "machine learning kya karti hai?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d2",
+              "score": 0.5229553609472071
+            },
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 0.0007161250105127692,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q2",
+          "condition": "hinglish",
+          "text": "Machine learning kya karti hai?",
+          "variant": {
+            "condition": "hinglish",
+            "text": "Machine learning kya karti hai?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d2",
+              "score": 0.5229553609472071
+            },
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 0.0007206250447779894,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q2",
+          "condition": "english_typo",
+          "text": "Wha ztdoes machine learnnigd o?",
+          "variant": {
+            "condition": "english_typo",
+            "text": "Wha ztdoes machine learnnigd o?",
+            "human_validated": false,
+            "transformation": "typo",
+            "settings": {
+              "seed": 42,
+              "intensity": 0.15,
+              "source_condition": "english",
+              "alphabet": "abcdefghijklmnopqrstuvwxyz",
+              "original_query_id": "q2",
+              "original_text": "What does machine learning do?",
+              "algorithm": "codepoint_v1"
+            }
+          },
+          "ranking": [
+            {
+              "id": "d2",
+              "score": 0.36978528198362876
+            },
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 0.0007009169785305858,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q2",
+          "condition": "hinglish_typo",
+          "text": "Mahien leairnng kya karti hai?",
+          "variant": {
+            "condition": "hinglish_typo",
+            "text": "Mahien leairnng kya karti hai?",
+            "human_validated": false,
+            "transformation": "typo",
+            "settings": {
+              "seed": 42,
+              "intensity": 0.15,
+              "source_condition": "hinglish",
+              "alphabet": "abcdefghijklmnopqrstuvwxyz",
+              "original_query_id": "q2",
+              "original_text": "Machine learning kya karti hai?",
+              "algorithm": "codepoint_v1"
+            }
+          },
+          "ranking": [
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            },
+            {
+              "id": "d11",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "hit_rate": 0.0,
+            "mrr": 0.0,
+            "map": 0.0,
+            "ndcg": 0.0
+          },
+          "latency_seconds": 0.0006922920001670718,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q3",
+          "condition": "english",
+          "text": "At what temperature does water boil?",
+          "variant": {
+            "condition": "english",
+            "text": "At what temperature does water boil?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d3",
+              "score": 0.6030909766317651
+            },
+            {
+              "id": "d12",
+              "score": 0.1864033597324756
+            },
+            {
+              "id": "d7",
+              "score": 0.1695524939585089
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 0.000704707985278219,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q3",
+          "condition": "hindi",
+          "text": "पानी किस तापमान पर उबलता है?",
+          "variant": {
+            "condition": "hindi",
+            "text": "पानी किस तापमान पर उबलता है?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            },
+            {
+              "id": "d11",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "hit_rate": 0.0,
+            "mrr": 0.0,
+            "map": 0.0,
+            "ndcg": 0.0
+          },
+          "latency_seconds": 0.0006955830031074584,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q3",
+          "condition": "romanized_hindi",
+          "text": "paani kis taapman par ubalta hai?",
+          "variant": {
+            "condition": "romanized_hindi",
+            "text": "paani kis taapman par ubalta hai?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            },
+            {
+              "id": "d11",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "hit_rate": 0.0,
+            "mrr": 0.0,
+            "map": 0.0,
+            "ndcg": 0.0
+          },
+          "latency_seconds": 0.0006765829748474061,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q3",
+          "condition": "hinglish",
+          "text": "Water kis temperature par boil hota hai?",
+          "variant": {
+            "condition": "hinglish",
+            "text": "Water kis temperature par boil hota hai?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d12",
+              "score": 0.30841331346226825
+            },
+            {
+              "id": "d7",
+              "score": 0.2805327465265879
+            },
+            {
+              "id": "d3",
+              "score": 0.22297876292448712
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 0.3333333333333333,
+            "map": 0.3333333333333333,
+            "ndcg": 0.5
+          },
+          "latency_seconds": 0.0007090410217642784,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q3",
+          "condition": "english_typo",
+          "text": "At what temperture idoesf waterq boil?",
+          "variant": {
+            "condition": "english_typo",
+            "text": "At what temperture idoesf waterq boil?",
+            "human_validated": false,
+            "transformation": "typo",
+            "settings": {
+              "seed": 42,
+              "intensity": 0.15,
+              "source_condition": "english",
+              "alphabet": "abcdefghijklmnopqrstuvwxyz",
+              "original_query_id": "q3",
+              "original_text": "At what temperature does water boil?",
+              "algorithm": "codepoint_v1"
+            }
+          },
+          "ranking": [
+            {
+              "id": "d3",
+              "score": 0.5878405693830646
+            },
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 0.0007459589978680015,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q3",
+          "condition": "hinglish_typo",
+          "text": "Water kis tbempkeartrue par boil hotqa hai",
+          "variant": {
+            "condition": "hinglish_typo",
+            "text": "Water kis tbempkeartrue par boil hotqa hai",
+            "human_validated": false,
+            "transformation": "typo",
+            "settings": {
+              "seed": 42,
+              "intensity": 0.15,
+              "source_condition": "hinglish",
+              "alphabet": "abcdefghijklmnopqrstuvwxyz",
+              "original_query_id": "q3",
+              "original_text": "Water kis temperature par boil hota hai?",
+              "algorithm": "codepoint_v1"
+            }
+          },
+          "ranking": [
+            {
+              "id": "d12",
+              "score": 0.30841331346226825
+            },
+            {
+              "id": "d7",
+              "score": 0.2805327465265879
+            },
+            {
+              "id": "d3",
+              "score": 0.22297876292448712
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 0.3333333333333333,
+            "map": 0.3333333333333333,
+            "ndcg": 0.5
+          },
+          "latency_seconds": 0.0007173750200308859,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q4",
+          "condition": "english",
+          "text": "What pumps blood in the body?",
+          "variant": {
+            "condition": "english",
+            "text": "What pumps blood in the body?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d4",
+              "score": 0.7657226744398399
+            },
+            {
+              "id": "d1",
+              "score": 0.12617417715967688
+            },
+            {
+              "id": "d7",
+              "score": 0.12530494191053884
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 0.0007133330218493938,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q4",
+          "condition": "hindi",
+          "text": "शरीर में खून कौन पंप करता है?",
+          "variant": {
+            "condition": "hindi",
+            "text": "शरीर में खून कौन पंप करता है?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            },
+            {
+              "id": "d11",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "hit_rate": 0.0,
+            "mrr": 0.0,
+            "map": 0.0,
+            "ndcg": 0.0
+          },
+          "latency_seconds": 0.0007103750249370933,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q4",
+          "condition": "romanized_hindi",
+          "text": "shareer mein khoon kaun pump karta hai?",
+          "variant": {
+            "condition": "romanized_hindi",
+            "text": "shareer mein khoon kaun pump karta hai?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            },
+            {
+              "id": "d11",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "hit_rate": 0.0,
+            "mrr": 0.0,
+            "map": 0.0,
+            "ndcg": 0.0
+          },
+          "latency_seconds": 0.0006995420553721488,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q4",
+          "condition": "hinglish",
+          "text": "Body mein blood kaun pump karta hai?",
+          "variant": {
+            "condition": "hinglish",
+            "text": "Body mein blood kaun pump karta hai?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d4",
+              "score": 0.4714045207910316
+            },
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 0.0007585000130347908,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q4",
+          "condition": "english_typo",
+          "text": "What pums lbood i ntheb ody?",
+          "variant": {
+            "condition": "english_typo",
+            "text": "What pums lbood i ntheb ody?",
+            "human_validated": false,
+            "transformation": "typo",
+            "settings": {
+              "seed": 42,
+              "intensity": 0.15,
+              "source_condition": "english",
+              "alphabet": "abcdefghijklmnopqrstuvwxyz",
+              "original_query_id": "q4",
+              "original_text": "What pumps blood in the body?",
+              "algorithm": "codepoint_v1"
+            }
+          },
+          "ranking": [
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            },
+            {
+              "id": "d11",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "hit_rate": 0.0,
+            "mrr": 0.0,
+            "map": 0.0,
+            "ndcg": 0.0
+          },
+          "latency_seconds": 0.000738375005312264,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q4",
+          "condition": "hinglish_typo",
+          "text": "Body mein bloo dkaun pup kartaf hei?",
+          "variant": {
+            "condition": "hinglish_typo",
+            "text": "Body mein bloo dkaun pup kartaf hei?",
+            "human_validated": false,
+            "transformation": "typo",
+            "settings": {
+              "seed": 42,
+              "intensity": 0.15,
+              "source_condition": "hinglish",
+              "alphabet": "abcdefghijklmnopqrstuvwxyz",
+              "original_query_id": "q4",
+              "original_text": "Body mein blood kaun pump karta hai?",
+              "algorithm": "codepoint_v1"
+            }
+          },
+          "ranking": [
+            {
+              "id": "d4",
+              "score": 0.3333333333333333
+            },
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 0.0007324999896809459,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q5",
+          "condition": "english",
+          "text": "How do solar panels produce electricity?",
+          "variant": {
+            "condition": "english",
+            "text": "How do solar panels produce electricity?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d5",
+              "score": 0.7402254507792896
+            },
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 0.0007478750194422901,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q5",
+          "condition": "hindi",
+          "text": "सौर पैनल बिजली कैसे बनाते हैं?",
+          "variant": {
+            "condition": "hindi",
+            "text": "सौर पैनल बिजली कैसे बनाते हैं?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            },
+            {
+              "id": "d11",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "hit_rate": 0.0,
+            "mrr": 0.0,
+            "map": 0.0,
+            "ndcg": 0.0
+          },
+          "latency_seconds": 0.0007267079781740904,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q5",
+          "condition": "romanized_hindi",
+          "text": "saur panel bijli kaise banate hain?",
+          "variant": {
+            "condition": "romanized_hindi",
+            "text": "saur panel bijli kaise banate hain?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            },
+            {
+              "id": "d11",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "hit_rate": 0.0,
+            "mrr": 0.0,
+            "map": 0.0,
+            "ndcg": 0.0
+          },
+          "latency_seconds": 0.0007354170083999634,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q5",
+          "condition": "hinglish",
+          "text": "Solar panels electricity kaise banate hain?",
+          "variant": {
+            "condition": "hinglish",
+            "text": "Solar panels electricity kaise banate hain?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d5",
+              "score": 0.7402254507792896
+            },
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 0.0007534159813076258,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q5",
+          "condition": "english_typo",
+          "text": "How do solar paenl produuce eloectriicty",
+          "variant": {
+            "condition": "english_typo",
+            "text": "How do solar paenl produuce eloectriicty",
+            "human_validated": false,
+            "transformation": "typo",
+            "settings": {
+              "seed": 42,
+              "intensity": 0.15,
+              "source_condition": "english",
+              "alphabet": "abcdefghijklmnopqrstuvwxyz",
+              "original_query_id": "q5",
+              "original_text": "How do solar panels produce electricity?",
+              "algorithm": "codepoint_v1"
+            }
+          },
+          "ranking": [
+            {
+              "id": "d5",
+              "score": 0.42736936326843494
+            },
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 0.0007344579789787531,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q5",
+          "condition": "hinglish_typo",
+          "text": "mSolar pnels elcetriicty kaise banate ahin?",
+          "variant": {
+            "condition": "hinglish_typo",
+            "text": "mSolar pnels elcetriicty kaise banate ahin?",
+            "human_validated": false,
+            "transformation": "typo",
+            "settings": {
+              "seed": 42,
+              "intensity": 0.15,
+              "source_condition": "hinglish",
+              "alphabet": "abcdefghijklmnopqrstuvwxyz",
+              "original_query_id": "q5",
+              "original_text": "Solar panels electricity kaise banate hain?",
+              "algorithm": "codepoint_v1"
+            }
+          },
+          "ranking": [
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            },
+            {
+              "id": "d11",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "hit_rate": 0.0,
+            "mrr": 0.0,
+            "map": 0.0,
+            "ndcg": 0.0
+          },
+          "latency_seconds": 0.0007463340298272669,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q6",
+          "condition": "english",
+          "text": "Where can readers borrow books?",
+          "variant": {
+            "condition": "english",
+            "text": "Where can readers borrow books?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d6",
+              "score": 0.5143851849372982
+            },
+            {
+              "id": "d8",
+              "score": 0.23184644649345093
+            },
+            {
+              "id": "d1",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 0.0007496249745599926,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q6",
+          "condition": "hindi",
+          "text": "पाठक किताबें कहाँ से उधार ले सकते हैं?",
+          "variant": {
+            "condition": "hindi",
+            "text": "पाठक किताबें कहाँ से उधार ले सकते हैं?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            },
+            {
+              "id": "d11",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "hit_rate": 0.0,
+            "mrr": 0.0,
+            "map": 0.0,
+            "ndcg": 0.0
+          },
+          "latency_seconds": 0.0007505409885197878,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q6",
+          "condition": "romanized_hindi",
+          "text": "pathak kitabein kahan se udhaar le sakte hain?",
+          "variant": {
+            "condition": "romanized_hindi",
+            "text": "pathak kitabein kahan se udhaar le sakte hain?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            },
+            {
+              "id": "d11",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "hit_rate": 0.0,
+            "mrr": 0.0,
+            "map": 0.0,
+            "ndcg": 0.0
+          },
+          "latency_seconds": 0.0007544170366600156,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q6",
+          "condition": "hinglish",
+          "text": "Readers books kahan se borrow kar sakte hain?",
+          "variant": {
+            "condition": "hinglish",
+            "text": "Readers books kahan se borrow kar sakte hain?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d6",
+              "score": 0.6299906171717701
+            },
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 0.0007669170154258609,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q6",
+          "condition": "english_typo",
+          "text": "Where can reaedrsb orrowbkos?",
+          "variant": {
+            "condition": "english_typo",
+            "text": "Where can reaedrsb orrowbkos?",
+            "human_validated": false,
+            "transformation": "typo",
+            "settings": {
+              "seed": 42,
+              "intensity": 0.15,
+              "source_condition": "english",
+              "alphabet": "abcdefghijklmnopqrstuvwxyz",
+              "original_query_id": "q6",
+              "original_text": "Where can readers borrow books?",
+              "algorithm": "codepoint_v1"
+            }
+          },
+          "ranking": [
+            {
+              "id": "d8",
+              "score": 0.4015698248809562
+            },
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "hit_rate": 0.0,
+            "mrr": 0.0,
+            "map": 0.0,
+            "ndcg": 0.0
+          },
+          "latency_seconds": 0.000751083018258214,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q6",
+          "condition": "hinglish_typo",
+          "text": "Readers books kahan seblorrobw kar askt ai?n",
+          "variant": {
+            "condition": "hinglish_typo",
+            "text": "Readers books kahan seblorrobw kar askt ai?n",
+            "human_validated": false,
+            "transformation": "typo",
+            "settings": {
+              "seed": 42,
+              "intensity": 0.15,
+              "source_condition": "hinglish",
+              "alphabet": "abcdefghijklmnopqrstuvwxyz",
+              "original_query_id": "q6",
+              "original_text": "Readers books kahan se borrow kar sakte hain?",
+              "algorithm": "codepoint_v1"
+            }
+          },
+          "ranking": [
+            {
+              "id": "d6",
+              "score": 0.6299906171717701
+            },
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 0.0007752919918857515,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q7",
+          "condition": "english",
+          "text": "How does rain form?",
+          "variant": {
+            "condition": "english",
+            "text": "How does rain form?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d7",
+              "score": 0.36978528198362876
+            },
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 0.0007543329847976565,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q7",
+          "condition": "hindi",
+          "text": "बारिश कैसे बनती है?",
+          "variant": {
+            "condition": "hindi",
+            "text": "बारिश कैसे बनती है?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            },
+            {
+              "id": "d11",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "hit_rate": 0.0,
+            "mrr": 0.0,
+            "map": 0.0,
+            "ndcg": 0.0
+          },
+          "latency_seconds": 0.0007187920273281634,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q7",
+          "condition": "romanized_hindi",
+          "text": "baarish kaise banti hai?",
+          "variant": {
+            "condition": "romanized_hindi",
+            "text": "baarish kaise banti hai?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            },
+            {
+              "id": "d11",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "hit_rate": 0.0,
+            "mrr": 0.0,
+            "map": 0.0,
+            "ndcg": 0.0
+          },
+          "latency_seconds": 0.0007202500128187239,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q7",
+          "condition": "hinglish",
+          "text": "Rain kaise form hoti hai?",
+          "variant": {
+            "condition": "hinglish",
+            "text": "Rain kaise form hoti hai?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d7",
+              "score": 0.36978528198362876
+            },
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 0.000743791984859854,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q7",
+          "condition": "english_typo",
+          "text": "Ho wdjoe rain form?",
+          "variant": {
+            "condition": "english_typo",
+            "text": "Ho wdjoe rain form?",
+            "human_validated": false,
+            "transformation": "typo",
+            "settings": {
+              "seed": 42,
+              "intensity": 0.15,
+              "source_condition": "english",
+              "alphabet": "abcdefghijklmnopqrstuvwxyz",
+              "original_query_id": "q7",
+              "original_text": "How does rain form?",
+              "algorithm": "codepoint_v1"
+            }
+          },
+          "ranking": [
+            {
+              "id": "d7",
+              "score": 0.36978528198362876
+            },
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 0.0007553749601356685,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q7",
+          "condition": "hinglish_typo",
+          "text": "Raink iase form hoti haic?",
+          "variant": {
+            "condition": "hinglish_typo",
+            "text": "Raink iase form hoti haic?",
+            "human_validated": false,
+            "transformation": "typo",
+            "settings": {
+              "seed": 42,
+              "intensity": 0.15,
+              "source_condition": "hinglish",
+              "alphabet": "abcdefghijklmnopqrstuvwxyz",
+              "original_query_id": "q7",
+              "original_text": "Rain kaise form hoti hai?",
+              "algorithm": "codepoint_v1"
+            }
+          },
+          "ranking": [
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            },
+            {
+              "id": "d11",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "hit_rate": 0.0,
+            "mrr": 0.0,
+            "map": 0.0,
+            "ndcg": 0.0
+          },
+          "latency_seconds": 0.0007222499698400497,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q8",
+          "condition": "english",
+          "text": "What account earns interest?",
+          "variant": {
+            "condition": "english",
+            "text": "What account earns interest?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d8",
+              "score": 0.5293350482773489
+            },
+            {
+              "id": "d10",
+              "score": 0.21493897987650606
+            },
+            {
+              "id": "d1",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 0.0007441660272888839,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q8",
+          "condition": "hindi",
+          "text": "किस खाते पर ब्याज मिलता है?",
+          "variant": {
+            "condition": "hindi",
+            "text": "किस खाते पर ब्याज मिलता है?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            },
+            {
+              "id": "d11",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "hit_rate": 0.0,
+            "mrr": 0.0,
+            "map": 0.0,
+            "ndcg": 0.0
+          },
+          "latency_seconds": 0.0007167920120991766,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q8",
+          "condition": "romanized_hindi",
+          "text": "kis khaate par byaaj milta hai?",
+          "variant": {
+            "condition": "romanized_hindi",
+            "text": "kis khaate par byaaj milta hai?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            },
+            {
+              "id": "d11",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "hit_rate": 0.0,
+            "mrr": 0.0,
+            "map": 0.0,
+            "ndcg": 0.0
+          },
+          "latency_seconds": 0.0007162909605540335,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q8",
+          "condition": "hinglish",
+          "text": "Kaunsa account interest earn karta hai?",
+          "variant": {
+            "condition": "hinglish",
+            "text": "Kaunsa account interest earn karta hai?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d8",
+              "score": 0.664419985844575
+            },
+            {
+              "id": "d10",
+              "score": 0.171239182615782
+            },
+            {
+              "id": "d1",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 0.0007461250061169267,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q8",
+          "condition": "english_typo",
+          "text": "Wat aaccount earsn interest?",
+          "variant": {
+            "condition": "english_typo",
+            "text": "Wat aaccount earsn interest?",
+            "human_validated": false,
+            "transformation": "typo",
+            "settings": {
+              "seed": 42,
+              "intensity": 0.15,
+              "source_condition": "english",
+              "alphabet": "abcdefghijklmnopqrstuvwxyz",
+              "original_query_id": "q8",
+              "original_text": "What account earns interest?",
+              "algorithm": "codepoint_v1"
+            }
+          },
+          "ranking": [
+            {
+              "id": "d8",
+              "score": 0.4015698248809562
+            },
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 0.0007157910149544477,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q8",
+          "condition": "hinglish_typo",
+          "text": "Kaunsa accoun tteres eanr kartam hai?",
+          "variant": {
+            "condition": "hinglish_typo",
+            "text": "Kaunsa accoun tteres eanr kartam hai?",
+            "human_validated": false,
+            "transformation": "typo",
+            "settings": {
+              "seed": 42,
+              "intensity": 0.15,
+              "source_condition": "hinglish",
+              "alphabet": "abcdefghijklmnopqrstuvwxyz",
+              "original_query_id": "q8",
+              "original_text": "Kaunsa account interest earn karta hai?",
+              "algorithm": "codepoint_v1"
+            }
+          },
+          "ranking": [
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            },
+            {
+              "id": "d11",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "hit_rate": 0.0,
+            "mrr": 0.0,
+            "map": 0.0,
+            "ndcg": 0.0
+          },
+          "latency_seconds": 0.0006909589865244925,
+          "judgment_status": "positive"
+        }
+      ],
+      "summary": {
+        "english": {
+          "precision": 0.3333333333333333,
+          "recall": 1.0,
+          "hit_rate": 1.0,
+          "mrr": 1.0,
+          "map": 1.0,
+          "ndcg": 1.0,
+          "n_queries": 8,
+          "n_judged": 8,
+          "n_missing": 0,
+          "n_empty": 0,
+          "mean_latency_seconds": 0.0008000623711268418,
+          "throughput_queries_per_second": 1249.9025527116812
+        },
+        "hindi": {
+          "precision": 0.041666666666666664,
+          "recall": 0.125,
+          "hit_rate": 0.125,
+          "mrr": 0.125,
+          "map": 0.125,
+          "ndcg": 0.125,
+          "n_queries": 8,
+          "n_judged": 8,
+          "n_missing": 0,
+          "n_empty": 0,
+          "mean_latency_seconds": 0.0007203592467703857,
+          "throughput_queries_per_second": 1388.196243031985
+        },
+        "romanized_hindi": {
+          "precision": 0.08333333333333333,
+          "recall": 0.25,
+          "hit_rate": 0.25,
+          "mrr": 0.25,
+          "map": 0.25,
+          "ndcg": 0.25,
+          "n_queries": 8,
+          "n_judged": 8,
+          "n_missing": 0,
+          "n_empty": 0,
+          "mean_latency_seconds": 0.0007184948844951577,
+          "throughput_queries_per_second": 1391.7983573434049
+        },
+        "hinglish": {
+          "precision": 0.3333333333333333,
+          "recall": 1.0,
+          "hit_rate": 1.0,
+          "mrr": 0.9166666666666666,
+          "map": 0.9166666666666666,
+          "ndcg": 0.9375,
+          "n_queries": 8,
+          "n_judged": 8,
+          "n_missing": 0,
+          "n_empty": 0,
+          "mean_latency_seconds": 0.0007394426356768236,
+          "throughput_queries_per_second": 1352.3699496779545
+        },
+        "english_typo": {
+          "precision": 0.25,
+          "recall": 0.75,
+          "hit_rate": 0.75,
+          "mrr": 0.75,
+          "map": 0.75,
+          "ndcg": 0.75,
+          "n_queries": 8,
+          "n_judged": 8,
+          "n_missing": 0,
+          "n_empty": 0,
+          "mean_latency_seconds": 0.0007294269962585531,
+          "throughput_queries_per_second": 1370.9391140296368
+        },
+        "hinglish_typo": {
+          "precision": 0.16666666666666666,
+          "recall": 0.5,
+          "hit_rate": 0.5,
+          "mrr": 0.41666666666666663,
+          "map": 0.41666666666666663,
+          "ndcg": 0.4375,
+          "n_queries": 8,
+          "n_judged": 8,
+          "n_missing": 0,
+          "n_empty": 0,
+          "mean_latency_seconds": 0.000721854499715846,
+          "throughput_queries_per_second": 1385.3207265365033
+        }
+      },
+      "comparisons": [
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "hindi",
+          "metric": "precision",
+          "relative_degradation": 0.8749999999999999,
+          "difference": -0.29166666666666663,
+          "ci_low": -0.3333333333333333,
+          "ci_high": -0.20833333333333331,
+          "confidence": 0.95,
+          "p_value": 0.01898101898101898,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "hindi",
+          "metric": "recall",
+          "relative_degradation": 0.875,
+          "difference": -0.875,
+          "ci_low": -1.0,
+          "ci_high": -0.625,
+          "confidence": 0.95,
+          "p_value": 0.01898101898101898,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "hindi",
+          "metric": "hit_rate",
+          "relative_degradation": 0.875,
+          "difference": -0.875,
+          "ci_low": -1.0,
+          "ci_high": -0.625,
+          "confidence": 0.95,
+          "p_value": 0.01898101898101898,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "hindi",
+          "metric": "mrr",
+          "relative_degradation": 0.875,
+          "difference": -0.875,
+          "ci_low": -1.0,
+          "ci_high": -0.625,
+          "confidence": 0.95,
+          "p_value": 0.01898101898101898,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "hindi",
+          "metric": "map",
+          "relative_degradation": 0.875,
+          "difference": -0.875,
+          "ci_low": -1.0,
+          "ci_high": -0.625,
+          "confidence": 0.95,
+          "p_value": 0.01898101898101898,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "hindi",
+          "metric": "ndcg",
+          "relative_degradation": 0.875,
+          "difference": -0.875,
+          "ci_low": -1.0,
+          "ci_high": -0.625,
+          "confidence": 0.95,
+          "p_value": 0.01898101898101898,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "romanized_hindi",
+          "metric": "precision",
+          "relative_degradation": 0.75,
+          "difference": -0.25,
+          "ci_low": -0.3333333333333333,
+          "ci_high": -0.125,
+          "confidence": 0.95,
+          "p_value": 0.04295704295704296,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "romanized_hindi",
+          "metric": "recall",
+          "relative_degradation": 0.75,
+          "difference": -0.75,
+          "ci_low": -1.0,
+          "ci_high": -0.375,
+          "confidence": 0.95,
+          "p_value": 0.04295704295704296,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "romanized_hindi",
+          "metric": "hit_rate",
+          "relative_degradation": 0.75,
+          "difference": -0.75,
+          "ci_low": -1.0,
+          "ci_high": -0.375,
+          "confidence": 0.95,
+          "p_value": 0.04295704295704296,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "romanized_hindi",
+          "metric": "mrr",
+          "relative_degradation": 0.75,
+          "difference": -0.75,
+          "ci_low": -1.0,
+          "ci_high": -0.375,
+          "confidence": 0.95,
+          "p_value": 0.04295704295704296,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "romanized_hindi",
+          "metric": "map",
+          "relative_degradation": 0.75,
+          "difference": -0.75,
+          "ci_low": -1.0,
+          "ci_high": -0.375,
+          "confidence": 0.95,
+          "p_value": 0.04295704295704296,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "romanized_hindi",
+          "metric": "ndcg",
+          "relative_degradation": 0.75,
+          "difference": -0.75,
+          "ci_low": -1.0,
+          "ci_high": -0.375,
+          "confidence": 0.95,
+          "p_value": 0.04295704295704296,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "hinglish",
+          "metric": "precision",
+          "relative_degradation": 0.0,
+          "difference": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "confidence": 0.95,
+          "p_value": 1.0,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "hinglish",
+          "metric": "recall",
+          "relative_degradation": 0.0,
+          "difference": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "confidence": 0.95,
+          "p_value": 1.0,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "hinglish",
+          "metric": "hit_rate",
+          "relative_degradation": 0.0,
+          "difference": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "confidence": 0.95,
+          "p_value": 1.0,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "hinglish",
+          "metric": "mrr",
+          "relative_degradation": 0.08333333333333337,
+          "difference": -0.08333333333333334,
+          "ci_low": -0.25,
+          "ci_high": 0.0,
+          "confidence": 0.95,
+          "p_value": 1.0,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "hinglish",
+          "metric": "map",
+          "relative_degradation": 0.08333333333333337,
+          "difference": -0.08333333333333334,
+          "ci_low": -0.25,
+          "ci_high": 0.0,
+          "confidence": 0.95,
+          "p_value": 1.0,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "hinglish",
+          "metric": "ndcg",
+          "relative_degradation": 0.0625,
+          "difference": -0.0625,
+          "ci_low": -0.1875,
+          "ci_high": 0.0,
+          "confidence": 0.95,
+          "p_value": 1.0,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "english_typo",
+          "metric": "precision",
+          "relative_degradation": 0.24999999999999994,
+          "difference": -0.08333333333333333,
+          "ci_low": -0.16666666666666666,
+          "ci_high": 0.0,
+          "confidence": 0.95,
+          "p_value": 0.5224775224775224,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "english_typo",
+          "metric": "recall",
+          "relative_degradation": 0.25,
+          "difference": -0.25,
+          "ci_low": -0.5,
+          "ci_high": 0.0,
+          "confidence": 0.95,
+          "p_value": 0.5224775224775224,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "english_typo",
+          "metric": "hit_rate",
+          "relative_degradation": 0.25,
+          "difference": -0.25,
+          "ci_low": -0.5,
+          "ci_high": 0.0,
+          "confidence": 0.95,
+          "p_value": 0.5224775224775224,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "english_typo",
+          "metric": "mrr",
+          "relative_degradation": 0.25,
+          "difference": -0.25,
+          "ci_low": -0.5,
+          "ci_high": 0.0,
+          "confidence": 0.95,
+          "p_value": 0.5224775224775224,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "english_typo",
+          "metric": "map",
+          "relative_degradation": 0.25,
+          "difference": -0.25,
+          "ci_low": -0.5,
+          "ci_high": 0.0,
+          "confidence": 0.95,
+          "p_value": 0.5224775224775224,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "english_typo",
+          "metric": "ndcg",
+          "relative_degradation": 0.25,
+          "difference": -0.25,
+          "ci_low": -0.5,
+          "ci_high": 0.0,
+          "confidence": 0.95,
+          "p_value": 0.5224775224775224,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "hinglish_typo",
+          "metric": "precision",
+          "relative_degradation": 0.5,
+          "difference": -0.16666666666666666,
+          "ci_low": -0.29166666666666663,
+          "ci_high": -0.041666666666666664,
+          "confidence": 0.95,
+          "p_value": 0.1258741258741259,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "hinglish_typo",
+          "metric": "recall",
+          "relative_degradation": 0.5,
+          "difference": -0.5,
+          "ci_low": -0.875,
+          "ci_high": -0.125,
+          "confidence": 0.95,
+          "p_value": 0.1258741258741259,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "hinglish_typo",
+          "metric": "hit_rate",
+          "relative_degradation": 0.5,
+          "difference": -0.5,
+          "ci_low": -0.875,
+          "ci_high": -0.125,
+          "confidence": 0.95,
+          "p_value": 0.1258741258741259,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "hinglish_typo",
+          "metric": "mrr",
+          "relative_degradation": 0.5833333333333334,
+          "difference": -0.5833333333333334,
+          "ci_low": -0.875,
+          "ci_high": -0.25,
+          "confidence": 0.95,
+          "p_value": 0.06793206793206794,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "hinglish_typo",
+          "metric": "map",
+          "relative_degradation": 0.5833333333333334,
+          "difference": -0.5833333333333334,
+          "ci_low": -0.875,
+          "ci_high": -0.25,
+          "confidence": 0.95,
+          "p_value": 0.06793206793206794,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "hinglish_typo",
+          "metric": "ndcg",
+          "relative_degradation": 0.5625,
+          "difference": -0.5625,
+          "ci_low": -0.875,
+          "ci_high": -0.25,
+          "confidence": 0.95,
+          "p_value": 0.06793206793206794,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        }
+      ]
+    },
+    "bm25": {
+      "metadata": {
+        "python": "3.11.15 (main, Mar 20 2026, 00:41:54) [Clang 22.1.1 ]",
+        "dependencies": {
+          "hinglish-rag-probe": "0.1.0",
+          "numpy": "2.4.6",
+          "scikit-learn": "1.9.1",
+          "PyYAML": "6.0.3",
+          "matplotlib": "3.11.2"
+        },
+        "platform": "macOS-15.7.4-arm64-arm-64bit",
+        "machine": "arm64",
+        "processor": "arm",
+        "thread_environment": {
+          "OMP_NUM_THREADS": null,
+          "MKL_NUM_THREADS": null,
+          "OPENBLAS_NUM_THREADS": null
+        },
+        "timestamp_utc": "2026-10-27T05:39:39.493669+00:00",
+        "schema_version": 1,
+        "k": 3,
+        "seed": 42,
+        "retriever": {
+          "name": "bm25",
+          "k1": 1.5,
+          "b": 0.75,
+          "tokenizer": "unicode_NFC_casefold_v1"
+        },
+        "dataset": {
+          "name": "HinglishRAGProbe synthetic demonstration",
+          "source": "Generated locally for software validation; no external corpus",
+          "license": "MIT (bundled example data)",
+          "version": "1",
+          "synthetic": true,
+          "human_reviewed": false,
+          "relevance_definition": "One positive document per query, assigned while constructing the synthetic example; other documents treated as nonrelevant."
+        },
+        "dataset_sha256": "b823e8823374b8144418c95cb2e3ab0ba6caad74767420372137d4a9237ab728",
+        "n_documents": 12,
+        "n_queries": 8,
+        "index_seconds": 0.0004386249929666519,
+        "peak_python_allocated_bytes": 106450,
+        "memory_scope": "tracemalloc Python allocations during index and search; excludes most native/GPU memory; null if tracing already active",
+        "timing_scope": "sequential queries, cold first query included, indexing excluded, tracemalloc enabled",
+        "judgment_policy": "missing excluded, judged-empty zero, unjudged documents nonrelevant",
+        "statistics": {
+          "unit": "original query",
+          "confidence": 0.95,
+          "resamples": 1000,
+          "permutations": 1000,
+          "multiplicity": "unadjusted exploratory"
+        }
+      },
+      "results": [
+        {
+          "query_id": "q1",
+          "condition": "english",
+          "text": "How does photosynthesis work?",
+          "variant": {
+            "condition": "english",
+            "text": "How does photosynthesis work?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d1",
+              "score": 2.0746136893351177
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            },
+            {
+              "id": "d11",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 0.00012754101771861315,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q1",
+          "condition": "hindi",
+          "text": "प्रकाश संश्लेषण कैसे काम करता है?",
+          "variant": {
+            "condition": "hindi",
+            "text": "प्रकाश संश्लेषण कैसे काम करता है?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            },
+            {
+              "id": "d11",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 0.00011858297511935234,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q1",
+          "condition": "romanized_hindi",
+          "text": "prakash sanshleshan kaise kaam karta hai?",
+          "variant": {
+            "condition": "romanized_hindi",
+            "text": "prakash sanshleshan kaise kaam karta hai?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            },
+            {
+              "id": "d11",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 0.00010512495646253228,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q1",
+          "condition": "hinglish",
+          "text": "Photosynthesis kaise kaam karta hai?",
+          "variant": {
+            "condition": "hinglish",
+            "text": "Photosynthesis kaise kaam karta hai?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d1",
+              "score": 2.0746136893351177
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            },
+            {
+              "id": "d11",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 8.78339633345604e-05,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q1",
+          "condition": "english_typo",
+          "text": "How vdoes hotosynthesis wgrk?",
+          "variant": {
+            "condition": "english_typo",
+            "text": "How vdoes hotosynthesis wgrk?",
+            "human_validated": false,
+            "transformation": "typo",
+            "settings": {
+              "seed": 42,
+              "intensity": 0.15,
+              "source_condition": "english",
+              "alphabet": "abcdefghijklmnopqrstuvwxyz",
+              "original_query_id": "q1",
+              "original_text": "How does photosynthesis work?",
+              "algorithm": "codepoint_v1"
+            }
+          },
+          "ranking": [
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            },
+            {
+              "id": "d11",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 7.30419997125864e-05,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q1",
+          "condition": "hinglish_typo",
+          "text": "Phtosynthess kaise kaam kaxat hai?",
+          "variant": {
+            "condition": "hinglish_typo",
+            "text": "Phtosynthess kaise kaam kaxat hai?",
+            "human_validated": false,
+            "transformation": "typo",
+            "settings": {
+              "seed": 42,
+              "intensity": 0.15,
+              "source_condition": "hinglish",
+              "alphabet": "abcdefghijklmnopqrstuvwxyz",
+              "original_query_id": "q1",
+              "original_text": "Photosynthesis kaise kaam karta hai?",
+              "algorithm": "codepoint_v1"
+            }
+          },
+          "ranking": [
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            },
+            {
+              "id": "d11",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 8.670799434185028e-05,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q2",
+          "condition": "english",
+          "text": "What does machine learning do?",
+          "variant": {
+            "condition": "english",
+            "text": "What does machine learning do?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d2",
+              "score": 4.149227378670235
+            },
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 8.583295857533813e-05,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q2",
+          "condition": "hindi",
+          "text": "मशीन लर्निंग क्या करती है?",
+          "variant": {
+            "condition": "hindi",
+            "text": "मशीन लर्निंग क्या करती है?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            },
+            {
+              "id": "d11",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "hit_rate": 0.0,
+            "mrr": 0.0,
+            "map": 0.0,
+            "ndcg": 0.0
+          },
+          "latency_seconds": 9.937502909451723e-05,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q2",
+          "condition": "romanized_hindi",
+          "text": "machine learning kya karti hai?",
+          "variant": {
+            "condition": "romanized_hindi",
+            "text": "machine learning kya karti hai?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d2",
+              "score": 4.149227378670235
+            },
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 9.604200022295117e-05,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q2",
+          "condition": "hinglish",
+          "text": "Machine learning kya karti hai?",
+          "variant": {
+            "condition": "hinglish",
+            "text": "Machine learning kya karti hai?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d2",
+              "score": 4.149227378670235
+            },
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 9.429099736735225e-05,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q2",
+          "condition": "english_typo",
+          "text": "Wha ztdoes machine learnnigd o?",
+          "variant": {
+            "condition": "english_typo",
+            "text": "Wha ztdoes machine learnnigd o?",
+            "human_validated": false,
+            "transformation": "typo",
+            "settings": {
+              "seed": 42,
+              "intensity": 0.15,
+              "source_condition": "english",
+              "alphabet": "abcdefghijklmnopqrstuvwxyz",
+              "original_query_id": "q2",
+              "original_text": "What does machine learning do?",
+              "algorithm": "codepoint_v1"
+            }
+          },
+          "ranking": [
+            {
+              "id": "d2",
+              "score": 2.0746136893351177
+            },
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 8.762499783188105e-05,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q2",
+          "condition": "hinglish_typo",
+          "text": "Mahien leairnng kya karti hai?",
+          "variant": {
+            "condition": "hinglish_typo",
+            "text": "Mahien leairnng kya karti hai?",
+            "human_validated": false,
+            "transformation": "typo",
+            "settings": {
+              "seed": 42,
+              "intensity": 0.15,
+              "source_condition": "hinglish",
+              "alphabet": "abcdefghijklmnopqrstuvwxyz",
+              "original_query_id": "q2",
+              "original_text": "Machine learning kya karti hai?",
+              "algorithm": "codepoint_v1"
+            }
+          },
+          "ranking": [
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            },
+            {
+              "id": "d11",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "hit_rate": 0.0,
+            "mrr": 0.0,
+            "map": 0.0,
+            "ndcg": 0.0
+          },
+          "latency_seconds": 8.462503319606185e-05,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q3",
+          "condition": "english",
+          "text": "At what temperature does water boil?",
+          "variant": {
+            "condition": "english",
+            "text": "At what temperature does water boil?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d3",
+              "score": 3.88979119463258
+            },
+            {
+              "id": "d12",
+              "score": 1.3395870328192903
+            },
+            {
+              "id": "d7",
+              "score": 1.2606157448583277
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 0.00010929204290732741,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q3",
+          "condition": "hindi",
+          "text": "पानी किस तापमान पर उबलता है?",
+          "variant": {
+            "condition": "hindi",
+            "text": "पानी किस तापमान पर उबलता है?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            },
+            {
+              "id": "d11",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "hit_rate": 0.0,
+            "mrr": 0.0,
+            "map": 0.0,
+            "ndcg": 0.0
+          },
+          "latency_seconds": 0.00010579096851870418,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q3",
+          "condition": "romanized_hindi",
+          "text": "paani kis taapman par ubalta hai?",
+          "variant": {
+            "condition": "romanized_hindi",
+            "text": "paani kis taapman par ubalta hai?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            },
+            {
+              "id": "d11",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "hit_rate": 0.0,
+            "mrr": 0.0,
+            "map": 0.0,
+            "ndcg": 0.0
+          },
+          "latency_seconds": 0.0001094160252250731,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q3",
+          "condition": "hinglish",
+          "text": "Water kis temperature par boil hota hai?",
+          "variant": {
+            "condition": "hinglish",
+            "text": "Water kis temperature par boil hota hai?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d12",
+              "score": 1.3395870328192903
+            },
+            {
+              "id": "d7",
+              "score": 1.2606157448583277
+            },
+            {
+              "id": "d3",
+              "score": 1.127660178017801
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 0.3333333333333333,
+            "map": 0.3333333333333333,
+            "ndcg": 0.5
+          },
+          "latency_seconds": 0.00012508296640589833,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q3",
+          "condition": "english_typo",
+          "text": "At what temperture idoesf waterq boil?",
+          "variant": {
+            "condition": "english_typo",
+            "text": "At what temperture idoesf waterq boil?",
+            "human_validated": false,
+            "transformation": "typo",
+            "settings": {
+              "seed": 42,
+              "intensity": 0.15,
+              "source_condition": "english",
+              "alphabet": "abcdefghijklmnopqrstuvwxyz",
+              "original_query_id": "q3",
+              "original_text": "At what temperature does water boil?",
+              "algorithm": "codepoint_v1"
+            }
+          },
+          "ranking": [
+            {
+              "id": "d3",
+              "score": 2.762131016614779
+            },
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 0.00010333402315154672,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q3",
+          "condition": "hinglish_typo",
+          "text": "Water kis tbempkeartrue par boil hotqa hai",
+          "variant": {
+            "condition": "hinglish_typo",
+            "text": "Water kis tbempkeartrue par boil hotqa hai",
+            "human_validated": false,
+            "transformation": "typo",
+            "settings": {
+              "seed": 42,
+              "intensity": 0.15,
+              "source_condition": "hinglish",
+              "alphabet": "abcdefghijklmnopqrstuvwxyz",
+              "original_query_id": "q3",
+              "original_text": "Water kis temperature par boil hota hai?",
+              "algorithm": "codepoint_v1"
+            }
+          },
+          "ranking": [
+            {
+              "id": "d12",
+              "score": 1.3395870328192903
+            },
+            {
+              "id": "d7",
+              "score": 1.2606157448583277
+            },
+            {
+              "id": "d3",
+              "score": 1.127660178017801
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 0.3333333333333333,
+            "map": 0.3333333333333333,
+            "ndcg": 0.5
+          },
+          "latency_seconds": 0.0001253749942407012,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q4",
+          "condition": "english",
+          "text": "What pumps blood in the body?",
+          "variant": {
+            "condition": "english",
+            "text": "What pumps blood in the body?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d4",
+              "score": 9.744452180273619
+            },
+            {
+              "id": "d1",
+              "score": 1.583864181787004
+            },
+            {
+              "id": "d7",
+              "score": 1.583864181787004
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 0.00010524998651817441,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q4",
+          "condition": "hindi",
+          "text": "शरीर में खून कौन पंप करता है?",
+          "variant": {
+            "condition": "hindi",
+            "text": "शरीर में खून कौन पंप करता है?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            },
+            {
+              "id": "d11",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "hit_rate": 0.0,
+            "mrr": 0.0,
+            "map": 0.0,
+            "ndcg": 0.0
+          },
+          "latency_seconds": 0.00011875003110617399,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q4",
+          "condition": "romanized_hindi",
+          "text": "shareer mein khoon kaun pump karta hai?",
+          "variant": {
+            "condition": "romanized_hindi",
+            "text": "shareer mein khoon kaun pump karta hai?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            },
+            {
+              "id": "d11",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "hit_rate": 0.0,
+            "mrr": 0.0,
+            "map": 0.0,
+            "ndcg": 0.0
+          },
+          "latency_seconds": 0.0001265829778276384,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q4",
+          "condition": "hinglish",
+          "text": "Body mein blood kaun pump karta hai?",
+          "variant": {
+            "condition": "hinglish",
+            "text": "Body mein blood kaun pump karta hai?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d4",
+              "score": 4.409155775941921
+            },
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 0.00012129097012802958,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q4",
+          "condition": "english_typo",
+          "text": "What pums lbood i ntheb ody?",
+          "variant": {
+            "condition": "english_typo",
+            "text": "What pums lbood i ntheb ody?",
+            "human_validated": false,
+            "transformation": "typo",
+            "settings": {
+              "seed": 42,
+              "intensity": 0.15,
+              "source_condition": "english",
+              "alphabet": "abcdefghijklmnopqrstuvwxyz",
+              "original_query_id": "q4",
+              "original_text": "What pumps blood in the body?",
+              "algorithm": "codepoint_v1"
+            }
+          },
+          "ranking": [
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            },
+            {
+              "id": "d11",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "hit_rate": 0.0,
+            "mrr": 0.0,
+            "map": 0.0,
+            "ndcg": 0.0
+          },
+          "latency_seconds": 0.00010720902355387807,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q4",
+          "condition": "hinglish_typo",
+          "text": "Body mein bloo dkaun pup kartaf hei?",
+          "variant": {
+            "condition": "hinglish_typo",
+            "text": "Body mein bloo dkaun pup kartaf hei?",
+            "human_validated": false,
+            "transformation": "typo",
+            "settings": {
+              "seed": 42,
+              "intensity": 0.15,
+              "source_condition": "hinglish",
+              "alphabet": "abcdefghijklmnopqrstuvwxyz",
+              "original_query_id": "q4",
+              "original_text": "Body mein blood kaun pump karta hai?",
+              "algorithm": "codepoint_v1"
+            }
+          },
+          "ranking": [
+            {
+              "id": "d4",
+              "score": 2.2045778879709603
+            },
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 0.0001247500185854733,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q5",
+          "condition": "english",
+          "text": "How do solar panels produce electricity?",
+          "variant": {
+            "condition": "english",
+            "text": "How do solar panels produce electricity?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d5",
+              "score": 7.055740616699138
+            },
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 9.929097723215818e-05,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q5",
+          "condition": "hindi",
+          "text": "सौर पैनल बिजली कैसे बनाते हैं?",
+          "variant": {
+            "condition": "hindi",
+            "text": "सौर पैनल बिजली कैसे बनाते हैं?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            },
+            {
+              "id": "d11",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "hit_rate": 0.0,
+            "mrr": 0.0,
+            "map": 0.0,
+            "ndcg": 0.0
+          },
+          "latency_seconds": 0.00011370901484042406,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q5",
+          "condition": "romanized_hindi",
+          "text": "saur panel bijli kaise banate hain?",
+          "variant": {
+            "condition": "romanized_hindi",
+            "text": "saur panel bijli kaise banate hain?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            },
+            {
+              "id": "d11",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "hit_rate": 0.0,
+            "mrr": 0.0,
+            "map": 0.0,
+            "ndcg": 0.0
+          },
+          "latency_seconds": 0.0001111250021494925,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q5",
+          "condition": "hinglish",
+          "text": "Solar panels electricity kaise banate hain?",
+          "variant": {
+            "condition": "hinglish",
+            "text": "Solar panels electricity kaise banate hain?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d5",
+              "score": 7.055740616699138
+            },
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 0.00010612502228468657,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q5",
+          "condition": "english_typo",
+          "text": "How do solar paenl produuce eloectriicty",
+          "variant": {
+            "condition": "english_typo",
+            "text": "How do solar paenl produuce eloectriicty",
+            "human_validated": false,
+            "transformation": "typo",
+            "settings": {
+              "seed": 42,
+              "intensity": 0.15,
+              "source_condition": "english",
+              "alphabet": "abcdefghijklmnopqrstuvwxyz",
+              "original_query_id": "q5",
+              "original_text": "How do solar panels produce electricity?",
+              "algorithm": "codepoint_v1"
+            }
+          },
+          "ranking": [
+            {
+              "id": "d5",
+              "score": 2.3519135388997126
+            },
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 0.00011000002268701792,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q5",
+          "condition": "hinglish_typo",
+          "text": "mSolar pnels elcetriicty kaise banate ahin?",
+          "variant": {
+            "condition": "hinglish_typo",
+            "text": "mSolar pnels elcetriicty kaise banate ahin?",
+            "human_validated": false,
+            "transformation": "typo",
+            "settings": {
+              "seed": 42,
+              "intensity": 0.15,
+              "source_condition": "hinglish",
+              "alphabet": "abcdefghijklmnopqrstuvwxyz",
+              "original_query_id": "q5",
+              "original_text": "Solar panels electricity kaise banate hain?",
+              "algorithm": "codepoint_v1"
+            }
+          },
+          "ranking": [
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            },
+            {
+              "id": "d11",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "hit_rate": 0.0,
+            "mrr": 0.0,
+            "map": 0.0,
+            "ndcg": 0.0
+          },
+          "latency_seconds": 0.000110417022369802,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q6",
+          "condition": "english",
+          "text": "Where can readers borrow books?",
+          "variant": {
+            "condition": "english",
+            "text": "Where can readers borrow books?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d6",
+              "score": 4.703827077799425
+            },
+            {
+              "id": "d8",
+              "score": 2.2045778879709603
+            },
+            {
+              "id": "d1",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 9.574997238814831e-05,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q6",
+          "condition": "hindi",
+          "text": "पाठक किताबें कहाँ से उधार ले सकते हैं?",
+          "variant": {
+            "condition": "hindi",
+            "text": "पाठक किताबें कहाँ से उधार ले सकते हैं?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            },
+            {
+              "id": "d11",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "hit_rate": 0.0,
+            "mrr": 0.0,
+            "map": 0.0,
+            "ndcg": 0.0
+          },
+          "latency_seconds": 0.00014470895985141397,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q6",
+          "condition": "romanized_hindi",
+          "text": "pathak kitabein kahan se udhaar le sakte hain?",
+          "variant": {
+            "condition": "romanized_hindi",
+            "text": "pathak kitabein kahan se udhaar le sakte hain?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            },
+            {
+              "id": "d11",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "hit_rate": 0.0,
+            "mrr": 0.0,
+            "map": 0.0,
+            "ndcg": 0.0
+          },
+          "latency_seconds": 0.0001337910071015358,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q6",
+          "condition": "hinglish",
+          "text": "Readers books kahan se borrow kar sakte hain?",
+          "variant": {
+            "condition": "hinglish",
+            "text": "Readers books kahan se borrow kar sakte hain?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d6",
+              "score": 4.703827077799425
+            },
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 0.0001383339986205101,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q6",
+          "condition": "english_typo",
+          "text": "Where can reaedrsb orrowbkos?",
+          "variant": {
+            "condition": "english_typo",
+            "text": "Where can reaedrsb orrowbkos?",
+            "human_validated": false,
+            "transformation": "typo",
+            "settings": {
+              "seed": 42,
+              "intensity": 0.15,
+              "source_condition": "english",
+              "alphabet": "abcdefghijklmnopqrstuvwxyz",
+              "original_query_id": "q6",
+              "original_text": "Where can readers borrow books?",
+              "algorithm": "codepoint_v1"
+            }
+          },
+          "ranking": [
+            {
+              "id": "d8",
+              "score": 2.2045778879709603
+            },
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "hit_rate": 0.0,
+            "mrr": 0.0,
+            "map": 0.0,
+            "ndcg": 0.0
+          },
+          "latency_seconds": 7.754197577014565e-05,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q6",
+          "condition": "hinglish_typo",
+          "text": "Readers books kahan seblorrobw kar askt ai?n",
+          "variant": {
+            "condition": "hinglish_typo",
+            "text": "Readers books kahan seblorrobw kar askt ai?n",
+            "human_validated": false,
+            "transformation": "typo",
+            "settings": {
+              "seed": 42,
+              "intensity": 0.15,
+              "source_condition": "hinglish",
+              "alphabet": "abcdefghijklmnopqrstuvwxyz",
+              "original_query_id": "q6",
+              "original_text": "Readers books kahan se borrow kar sakte hain?",
+              "algorithm": "codepoint_v1"
+            }
+          },
+          "ranking": [
+            {
+              "id": "d6",
+              "score": 4.703827077799425
+            },
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 0.00013437500456348062,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q7",
+          "condition": "english",
+          "text": "How does rain form?",
+          "variant": {
+            "condition": "english",
+            "text": "How does rain form?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d7",
+              "score": 2.0746136893351177
+            },
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 7.754098623991013e-05,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q7",
+          "condition": "hindi",
+          "text": "बारिश कैसे बनती है?",
+          "variant": {
+            "condition": "hindi",
+            "text": "बारिश कैसे बनती है?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            },
+            {
+              "id": "d11",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "hit_rate": 0.0,
+            "mrr": 0.0,
+            "map": 0.0,
+            "ndcg": 0.0
+          },
+          "latency_seconds": 7.95419909991324e-05,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q7",
+          "condition": "romanized_hindi",
+          "text": "baarish kaise banti hai?",
+          "variant": {
+            "condition": "romanized_hindi",
+            "text": "baarish kaise banti hai?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            },
+            {
+              "id": "d11",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "hit_rate": 0.0,
+            "mrr": 0.0,
+            "map": 0.0,
+            "ndcg": 0.0
+          },
+          "latency_seconds": 7.683300646021962e-05,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q7",
+          "condition": "hinglish",
+          "text": "Rain kaise form hoti hai?",
+          "variant": {
+            "condition": "hinglish",
+            "text": "Rain kaise form hoti hai?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d7",
+              "score": 2.0746136893351177
+            },
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 9.229197166860104e-05,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q7",
+          "condition": "english_typo",
+          "text": "Ho wdjoe rain form?",
+          "variant": {
+            "condition": "english_typo",
+            "text": "Ho wdjoe rain form?",
+            "human_validated": false,
+            "transformation": "typo",
+            "settings": {
+              "seed": 42,
+              "intensity": 0.15,
+              "source_condition": "english",
+              "alphabet": "abcdefghijklmnopqrstuvwxyz",
+              "original_query_id": "q7",
+              "original_text": "How does rain form?",
+              "algorithm": "codepoint_v1"
+            }
+          },
+          "ranking": [
+            {
+              "id": "d7",
+              "score": 2.0746136893351177
+            },
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 7.758400170132518e-05,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q7",
+          "condition": "hinglish_typo",
+          "text": "Raink iase form hoti haic?",
+          "variant": {
+            "condition": "hinglish_typo",
+            "text": "Raink iase form hoti haic?",
+            "human_validated": false,
+            "transformation": "typo",
+            "settings": {
+              "seed": 42,
+              "intensity": 0.15,
+              "source_condition": "hinglish",
+              "alphabet": "abcdefghijklmnopqrstuvwxyz",
+              "original_query_id": "q7",
+              "original_text": "Rain kaise form hoti hai?",
+              "algorithm": "codepoint_v1"
+            }
+          },
+          "ranking": [
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            },
+            {
+              "id": "d11",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "hit_rate": 0.0,
+            "mrr": 0.0,
+            "map": 0.0,
+            "ndcg": 0.0
+          },
+          "latency_seconds": 8.779100608080626e-05,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q8",
+          "condition": "english",
+          "text": "What account earns interest?",
+          "variant": {
+            "condition": "english",
+            "text": "What account earns interest?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d8",
+              "score": 3.8876632598003056
+            },
+            {
+              "id": "d10",
+              "score": 1.583864181787004
+            },
+            {
+              "id": "d1",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 7.750000804662704e-05,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q8",
+          "condition": "hindi",
+          "text": "किस खाते पर ब्याज मिलता है?",
+          "variant": {
+            "condition": "hindi",
+            "text": "किस खाते पर ब्याज मिलता है?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            },
+            {
+              "id": "d11",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "hit_rate": 0.0,
+            "mrr": 0.0,
+            "map": 0.0,
+            "ndcg": 0.0
+          },
+          "latency_seconds": 0.00011074997019022703,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q8",
+          "condition": "romanized_hindi",
+          "text": "kis khaate par byaaj milta hai?",
+          "variant": {
+            "condition": "romanized_hindi",
+            "text": "kis khaate par byaaj milta hai?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            },
+            {
+              "id": "d11",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "hit_rate": 0.0,
+            "mrr": 0.0,
+            "map": 0.0,
+            "ndcg": 0.0
+          },
+          "latency_seconds": 0.00010837498120963573,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q8",
+          "condition": "hinglish",
+          "text": "Kaunsa account interest earn karta hai?",
+          "variant": {
+            "condition": "hinglish",
+            "text": "Kaunsa account interest earn karta hai?",
+            "human_validated": false,
+            "transformation": "user_supplied",
+            "settings": {}
+          },
+          "ranking": [
+            {
+              "id": "d8",
+              "score": 6.092241147771266
+            },
+            {
+              "id": "d10",
+              "score": 1.583864181787004
+            },
+            {
+              "id": "d1",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 0.00011008401634171605,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q8",
+          "condition": "english_typo",
+          "text": "Wat aaccount earsn interest?",
+          "variant": {
+            "condition": "english_typo",
+            "text": "Wat aaccount earsn interest?",
+            "human_validated": false,
+            "transformation": "typo",
+            "settings": {
+              "seed": 42,
+              "intensity": 0.15,
+              "source_condition": "english",
+              "alphabet": "abcdefghijklmnopqrstuvwxyz",
+              "original_query_id": "q8",
+              "original_text": "What account earns interest?",
+              "algorithm": "codepoint_v1"
+            }
+          },
+          "ranking": [
+            {
+              "id": "d8",
+              "score": 2.2045778879709603
+            },
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "map": 1.0,
+            "ndcg": 1.0
+          },
+          "latency_seconds": 7.741601439192891e-05,
+          "judgment_status": "positive"
+        },
+        {
+          "query_id": "q8",
+          "condition": "hinglish_typo",
+          "text": "Kaunsa accoun tteres eanr kartam hai?",
+          "variant": {
+            "condition": "hinglish_typo",
+            "text": "Kaunsa accoun tteres eanr kartam hai?",
+            "human_validated": false,
+            "transformation": "typo",
+            "settings": {
+              "seed": 42,
+              "intensity": 0.15,
+              "source_condition": "hinglish",
+              "alphabet": "abcdefghijklmnopqrstuvwxyz",
+              "original_query_id": "q8",
+              "original_text": "Kaunsa account interest earn karta hai?",
+              "algorithm": "codepoint_v1"
+            }
+          },
+          "ranking": [
+            {
+              "id": "d1",
+              "score": 0.0
+            },
+            {
+              "id": "d10",
+              "score": 0.0
+            },
+            {
+              "id": "d11",
+              "score": 0.0
+            }
+          ],
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "hit_rate": 0.0,
+            "mrr": 0.0,
+            "map": 0.0,
+            "ndcg": 0.0
+          },
+          "latency_seconds": 0.00011054199421778321,
+          "judgment_status": "positive"
+        }
+      ],
+      "summary": {
+        "english": {
+          "precision": 0.3333333333333333,
+          "recall": 1.0,
+          "hit_rate": 1.0,
+          "mrr": 1.0,
+          "map": 1.0,
+          "ndcg": 1.0,
+          "n_queries": 8,
+          "n_judged": 8,
+          "n_missing": 0,
+          "n_empty": 0,
+          "mean_latency_seconds": 9.72497437032871e-05,
+          "throughput_queries_per_second": 10282.803449344201
+        },
+        "hindi": {
+          "precision": 0.041666666666666664,
+          "recall": 0.125,
+          "hit_rate": 0.125,
+          "mrr": 0.125,
+          "map": 0.125,
+          "ndcg": 0.125,
+          "n_queries": 8,
+          "n_judged": 8,
+          "n_missing": 0,
+          "n_empty": 0,
+          "mean_latency_seconds": 0.00011140111746499315,
+          "throughput_queries_per_second": 8976.570637311977
+        },
+        "romanized_hindi": {
+          "precision": 0.08333333333333333,
+          "recall": 0.25,
+          "hit_rate": 0.25,
+          "mrr": 0.25,
+          "map": 0.25,
+          "ndcg": 0.25,
+          "n_queries": 8,
+          "n_judged": 8,
+          "n_missing": 0,
+          "n_empty": 0,
+          "mean_latency_seconds": 0.00010841124458238482,
+          "throughput_queries_per_second": 9224.135410050303
+        },
+        "hinglish": {
+          "precision": 0.3333333333333333,
+          "recall": 1.0,
+          "hit_rate": 1.0,
+          "mrr": 0.9166666666666666,
+          "map": 0.9166666666666666,
+          "ndcg": 0.9375,
+          "n_queries": 8,
+          "n_judged": 8,
+          "n_missing": 0,
+          "n_empty": 0,
+          "mean_latency_seconds": 0.00010941673826891929,
+          "throughput_queries_per_second": 9139.369495206915
+        },
+        "english_typo": {
+          "precision": 0.25,
+          "recall": 0.75,
+          "hit_rate": 0.75,
+          "mrr": 0.75,
+          "map": 0.75,
+          "ndcg": 0.75,
+          "n_queries": 8,
+          "n_judged": 8,
+          "n_missing": 0,
+          "n_empty": 0,
+          "mean_latency_seconds": 8.921900735003874e-05,
+          "throughput_queries_per_second": 11208.37397435543
+        },
+        "hinglish_typo": {
+          "precision": 0.16666666666666666,
+          "recall": 0.5,
+          "hit_rate": 0.5,
+          "mrr": 0.41666666666666663,
+          "map": 0.41666666666666663,
+          "ndcg": 0.4375,
+          "n_queries": 8,
+          "n_judged": 8,
+          "n_missing": 0,
+          "n_empty": 0,
+          "mean_latency_seconds": 0.00010807288344949484,
+          "throughput_queries_per_second": 9253.014892189169
+        }
+      },
+      "comparisons": [
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "hindi",
+          "metric": "precision",
+          "relative_degradation": 0.8749999999999999,
+          "difference": -0.29166666666666663,
+          "ci_low": -0.3333333333333333,
+          "ci_high": -0.20833333333333331,
+          "confidence": 0.95,
+          "p_value": 0.01898101898101898,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "hindi",
+          "metric": "recall",
+          "relative_degradation": 0.875,
+          "difference": -0.875,
+          "ci_low": -1.0,
+          "ci_high": -0.625,
+          "confidence": 0.95,
+          "p_value": 0.01898101898101898,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "hindi",
+          "metric": "hit_rate",
+          "relative_degradation": 0.875,
+          "difference": -0.875,
+          "ci_low": -1.0,
+          "ci_high": -0.625,
+          "confidence": 0.95,
+          "p_value": 0.01898101898101898,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "hindi",
+          "metric": "mrr",
+          "relative_degradation": 0.875,
+          "difference": -0.875,
+          "ci_low": -1.0,
+          "ci_high": -0.625,
+          "confidence": 0.95,
+          "p_value": 0.01898101898101898,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "hindi",
+          "metric": "map",
+          "relative_degradation": 0.875,
+          "difference": -0.875,
+          "ci_low": -1.0,
+          "ci_high": -0.625,
+          "confidence": 0.95,
+          "p_value": 0.01898101898101898,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "hindi",
+          "metric": "ndcg",
+          "relative_degradation": 0.875,
+          "difference": -0.875,
+          "ci_low": -1.0,
+          "ci_high": -0.625,
+          "confidence": 0.95,
+          "p_value": 0.01898101898101898,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "romanized_hindi",
+          "metric": "precision",
+          "relative_degradation": 0.75,
+          "difference": -0.25,
+          "ci_low": -0.3333333333333333,
+          "ci_high": -0.125,
+          "confidence": 0.95,
+          "p_value": 0.04295704295704296,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "romanized_hindi",
+          "metric": "recall",
+          "relative_degradation": 0.75,
+          "difference": -0.75,
+          "ci_low": -1.0,
+          "ci_high": -0.375,
+          "confidence": 0.95,
+          "p_value": 0.04295704295704296,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "romanized_hindi",
+          "metric": "hit_rate",
+          "relative_degradation": 0.75,
+          "difference": -0.75,
+          "ci_low": -1.0,
+          "ci_high": -0.375,
+          "confidence": 0.95,
+          "p_value": 0.04295704295704296,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "romanized_hindi",
+          "metric": "mrr",
+          "relative_degradation": 0.75,
+          "difference": -0.75,
+          "ci_low": -1.0,
+          "ci_high": -0.375,
+          "confidence": 0.95,
+          "p_value": 0.04295704295704296,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "romanized_hindi",
+          "metric": "map",
+          "relative_degradation": 0.75,
+          "difference": -0.75,
+          "ci_low": -1.0,
+          "ci_high": -0.375,
+          "confidence": 0.95,
+          "p_value": 0.04295704295704296,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "romanized_hindi",
+          "metric": "ndcg",
+          "relative_degradation": 0.75,
+          "difference": -0.75,
+          "ci_low": -1.0,
+          "ci_high": -0.375,
+          "confidence": 0.95,
+          "p_value": 0.04295704295704296,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "hinglish",
+          "metric": "precision",
+          "relative_degradation": 0.0,
+          "difference": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "confidence": 0.95,
+          "p_value": 1.0,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "hinglish",
+          "metric": "recall",
+          "relative_degradation": 0.0,
+          "difference": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "confidence": 0.95,
+          "p_value": 1.0,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "hinglish",
+          "metric": "hit_rate",
+          "relative_degradation": 0.0,
+          "difference": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "confidence": 0.95,
+          "p_value": 1.0,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "hinglish",
+          "metric": "mrr",
+          "relative_degradation": 0.08333333333333337,
+          "difference": -0.08333333333333334,
+          "ci_low": -0.25,
+          "ci_high": 0.0,
+          "confidence": 0.95,
+          "p_value": 1.0,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "hinglish",
+          "metric": "map",
+          "relative_degradation": 0.08333333333333337,
+          "difference": -0.08333333333333334,
+          "ci_low": -0.25,
+          "ci_high": 0.0,
+          "confidence": 0.95,
+          "p_value": 1.0,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "hinglish",
+          "metric": "ndcg",
+          "relative_degradation": 0.0625,
+          "difference": -0.0625,
+          "ci_low": -0.1875,
+          "ci_high": 0.0,
+          "confidence": 0.95,
+          "p_value": 1.0,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "english_typo",
+          "metric": "precision",
+          "relative_degradation": 0.24999999999999994,
+          "difference": -0.08333333333333333,
+          "ci_low": -0.16666666666666666,
+          "ci_high": 0.0,
+          "confidence": 0.95,
+          "p_value": 0.5224775224775224,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "english_typo",
+          "metric": "recall",
+          "relative_degradation": 0.25,
+          "difference": -0.25,
+          "ci_low": -0.5,
+          "ci_high": 0.0,
+          "confidence": 0.95,
+          "p_value": 0.5224775224775224,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "english_typo",
+          "metric": "hit_rate",
+          "relative_degradation": 0.25,
+          "difference": -0.25,
+          "ci_low": -0.5,
+          "ci_high": 0.0,
+          "confidence": 0.95,
+          "p_value": 0.5224775224775224,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "english_typo",
+          "metric": "mrr",
+          "relative_degradation": 0.25,
+          "difference": -0.25,
+          "ci_low": -0.5,
+          "ci_high": 0.0,
+          "confidence": 0.95,
+          "p_value": 0.5224775224775224,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "english_typo",
+          "metric": "map",
+          "relative_degradation": 0.25,
+          "difference": -0.25,
+          "ci_low": -0.5,
+          "ci_high": 0.0,
+          "confidence": 0.95,
+          "p_value": 0.5224775224775224,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "english_typo",
+          "metric": "ndcg",
+          "relative_degradation": 0.25,
+          "difference": -0.25,
+          "ci_low": -0.5,
+          "ci_high": 0.0,
+          "confidence": 0.95,
+          "p_value": 0.5224775224775224,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "hinglish_typo",
+          "metric": "precision",
+          "relative_degradation": 0.5,
+          "difference": -0.16666666666666666,
+          "ci_low": -0.29166666666666663,
+          "ci_high": -0.041666666666666664,
+          "confidence": 0.95,
+          "p_value": 0.1258741258741259,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "hinglish_typo",
+          "metric": "recall",
+          "relative_degradation": 0.5,
+          "difference": -0.5,
+          "ci_low": -0.875,
+          "ci_high": -0.125,
+          "confidence": 0.95,
+          "p_value": 0.1258741258741259,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "hinglish_typo",
+          "metric": "hit_rate",
+          "relative_degradation": 0.5,
+          "difference": -0.5,
+          "ci_low": -0.875,
+          "ci_high": -0.125,
+          "confidence": 0.95,
+          "p_value": 0.1258741258741259,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "hinglish_typo",
+          "metric": "mrr",
+          "relative_degradation": 0.5833333333333334,
+          "difference": -0.5833333333333334,
+          "ci_low": -0.875,
+          "ci_high": -0.25,
+          "confidence": 0.95,
+          "p_value": 0.06793206793206794,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "hinglish_typo",
+          "metric": "map",
+          "relative_degradation": 0.5833333333333334,
+          "difference": -0.5833333333333334,
+          "ci_low": -0.875,
+          "ci_high": -0.25,
+          "confidence": 0.95,
+          "p_value": 0.06793206793206794,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        },
+        {
+          "kind": "condition",
+          "baseline": "english",
+          "candidate": "hinglish_typo",
+          "metric": "ndcg",
+          "relative_degradation": 0.5625,
+          "difference": -0.5625,
+          "ci_low": -0.875,
+          "ci_high": -0.25,
+          "confidence": 0.95,
+          "p_value": 0.06793206793206794,
+          "n_pairs": 8,
+          "seed": 42,
+          "resamples": 1000,
+          "permutations": 1000,
+          "test": "two-sided paired sign-flip (Monte Carlo)",
+          "multiplicity_adjustment": "none; exploratory"
+        }
+      ]
+    }
+  },
+  "comparisons": [
+    {
+      "kind": "retriever",
+      "baseline": "tfidf",
+      "candidate": "bm25",
+      "condition": "english",
+      "metric": "precision",
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "confidence": 0.95,
+      "p_value": 1.0,
+      "n_pairs": 8,
+      "seed": 42,
+      "resamples": 1000,
+      "permutations": 1000,
+      "test": "two-sided paired sign-flip (Monte Carlo)",
+      "multiplicity_adjustment": "none; exploratory"
+    },
+    {
+      "kind": "retriever",
+      "baseline": "tfidf",
+      "candidate": "bm25",
+      "condition": "english",
+      "metric": "recall",
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "confidence": 0.95,
+      "p_value": 1.0,
+      "n_pairs": 8,
+      "seed": 42,
+      "resamples": 1000,
+      "permutations": 1000,
+      "test": "two-sided paired sign-flip (Monte Carlo)",
+      "multiplicity_adjustment": "none; exploratory"
+    },
+    {
+      "kind": "retriever",
+      "baseline": "tfidf",
+      "candidate": "bm25",
+      "condition": "english",
+      "metric": "hit_rate",
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "confidence": 0.95,
+      "p_value": 1.0,
+      "n_pairs": 8,
+      "seed": 42,
+      "resamples": 1000,
+      "permutations": 1000,
+      "test": "two-sided paired sign-flip (Monte Carlo)",
+      "multiplicity_adjustment": "none; exploratory"
+    },
+    {
+      "kind": "retriever",
+      "baseline": "tfidf",
+      "candidate": "bm25",
+      "condition": "english",
+      "metric": "mrr",
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "confidence": 0.95,
+      "p_value": 1.0,
+      "n_pairs": 8,
+      "seed": 42,
+      "resamples": 1000,
+      "permutations": 1000,
+      "test": "two-sided paired sign-flip (Monte Carlo)",
+      "multiplicity_adjustment": "none; exploratory"
+    },
+    {
+      "kind": "retriever",
+      "baseline": "tfidf",
+      "candidate": "bm25",
+      "condition": "english",
+      "metric": "map",
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "confidence": 0.95,
+      "p_value": 1.0,
+      "n_pairs": 8,
+      "seed": 42,
+      "resamples": 1000,
+      "permutations": 1000,
+      "test": "two-sided paired sign-flip (Monte Carlo)",
+      "multiplicity_adjustment": "none; exploratory"
+    },
+    {
+      "kind": "retriever",
+      "baseline": "tfidf",
+      "candidate": "bm25",
+      "condition": "english",
+      "metric": "ndcg",
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "confidence": 0.95,
+      "p_value": 1.0,
+      "n_pairs": 8,
+      "seed": 42,
+      "resamples": 1000,
+      "permutations": 1000,
+      "test": "two-sided paired sign-flip (Monte Carlo)",
+      "multiplicity_adjustment": "none; exploratory"
+    },
+    {
+      "kind": "retriever",
+      "baseline": "tfidf",
+      "candidate": "bm25",
+      "condition": "english_typo",
+      "metric": "precision",
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "confidence": 0.95,
+      "p_value": 1.0,
+      "n_pairs": 8,
+      "seed": 42,
+      "resamples": 1000,
+      "permutations": 1000,
+      "test": "two-sided paired sign-flip (Monte Carlo)",
+      "multiplicity_adjustment": "none; exploratory"
+    },
+    {
+      "kind": "retriever",
+      "baseline": "tfidf",
+      "candidate": "bm25",
+      "condition": "english_typo",
+      "metric": "recall",
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "confidence": 0.95,
+      "p_value": 1.0,
+      "n_pairs": 8,
+      "seed": 42,
+      "resamples": 1000,
+      "permutations": 1000,
+      "test": "two-sided paired sign-flip (Monte Carlo)",
+      "multiplicity_adjustment": "none; exploratory"
+    },
+    {
+      "kind": "retriever",
+      "baseline": "tfidf",
+      "candidate": "bm25",
+      "condition": "english_typo",
+      "metric": "hit_rate",
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "confidence": 0.95,
+      "p_value": 1.0,
+      "n_pairs": 8,
+      "seed": 42,
+      "resamples": 1000,
+      "permutations": 1000,
+      "test": "two-sided paired sign-flip (Monte Carlo)",
+      "multiplicity_adjustment": "none; exploratory"
+    },
+    {
+      "kind": "retriever",
+      "baseline": "tfidf",
+      "candidate": "bm25",
+      "condition": "english_typo",
+      "metric": "mrr",
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "confidence": 0.95,
+      "p_value": 1.0,
+      "n_pairs": 8,
+      "seed": 42,
+      "resamples": 1000,
+      "permutations": 1000,
+      "test": "two-sided paired sign-flip (Monte Carlo)",
+      "multiplicity_adjustment": "none; exploratory"
+    },
+    {
+      "kind": "retriever",
+      "baseline": "tfidf",
+      "candidate": "bm25",
+      "condition": "english_typo",
+      "metric": "map",
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "confidence": 0.95,
+      "p_value": 1.0,
+      "n_pairs": 8,
+      "seed": 42,
+      "resamples": 1000,
+      "permutations": 1000,
+      "test": "two-sided paired sign-flip (Monte Carlo)",
+      "multiplicity_adjustment": "none; exploratory"
+    },
+    {
+      "kind": "retriever",
+      "baseline": "tfidf",
+      "candidate": "bm25",
+      "condition": "english_typo",
+      "metric": "ndcg",
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "confidence": 0.95,
+      "p_value": 1.0,
+      "n_pairs": 8,
+      "seed": 42,
+      "resamples": 1000,
+      "permutations": 1000,
+      "test": "two-sided paired sign-flip (Monte Carlo)",
+      "multiplicity_adjustment": "none; exploratory"
+    },
+    {
+      "kind": "retriever",
+      "baseline": "tfidf",
+      "candidate": "bm25",
+      "condition": "hindi",
+      "metric": "precision",
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "confidence": 0.95,
+      "p_value": 1.0,
+      "n_pairs": 8,
+      "seed": 42,
+      "resamples": 1000,
+      "permutations": 1000,
+      "test": "two-sided paired sign-flip (Monte Carlo)",
+      "multiplicity_adjustment": "none; exploratory"
+    },
+    {
+      "kind": "retriever",
+      "baseline": "tfidf",
+      "candidate": "bm25",
+      "condition": "hindi",
+      "metric": "recall",
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "confidence": 0.95,
+      "p_value": 1.0,
+      "n_pairs": 8,
+      "seed": 42,
+      "resamples": 1000,
+      "permutations": 1000,
+      "test": "two-sided paired sign-flip (Monte Carlo)",
+      "multiplicity_adjustment": "none; exploratory"
+    },
+    {
+      "kind": "retriever",
+      "baseline": "tfidf",
+      "candidate": "bm25",
+      "condition": "hindi",
+      "metric": "hit_rate",
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "confidence": 0.95,
+      "p_value": 1.0,
+      "n_pairs": 8,
+      "seed": 42,
+      "resamples": 1000,
+      "permutations": 1000,
+      "test": "two-sided paired sign-flip (Monte Carlo)",
+      "multiplicity_adjustment": "none; exploratory"
+    },
+    {
+      "kind": "retriever",
+      "baseline": "tfidf",
+      "candidate": "bm25",
+      "condition": "hindi",
+      "metric": "mrr",
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "confidence": 0.95,
+      "p_value": 1.0,
+      "n_pairs": 8,
+      "seed": 42,
+      "resamples": 1000,
+      "permutations": 1000,
+      "test": "two-sided paired sign-flip (Monte Carlo)",
+      "multiplicity_adjustment": "none; exploratory"
+    },
+    {
+      "kind": "retriever",
+      "baseline": "tfidf",
+      "candidate": "bm25",
+      "condition": "hindi",
+      "metric": "map",
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "confidence": 0.95,
+      "p_value": 1.0,
+      "n_pairs": 8,
+      "seed": 42,
+      "resamples": 1000,
+      "permutations": 1000,
+      "test": "two-sided paired sign-flip (Monte Carlo)",
+      "multiplicity_adjustment": "none; exploratory"
+    },
+    {
+      "kind": "retriever",
+      "baseline": "tfidf",
+      "candidate": "bm25",
+      "condition": "hindi",
+      "metric": "ndcg",
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "confidence": 0.95,
+      "p_value": 1.0,
+      "n_pairs": 8,
+      "seed": 42,
+      "resamples": 1000,
+      "permutations": 1000,
+      "test": "two-sided paired sign-flip (Monte Carlo)",
+      "multiplicity_adjustment": "none; exploratory"
+    },
+    {
+      "kind": "retriever",
+      "baseline": "tfidf",
+      "candidate": "bm25",
+      "condition": "hinglish",
+      "metric": "precision",
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "confidence": 0.95,
+      "p_value": 1.0,
+      "n_pairs": 8,
+      "seed": 42,
+      "resamples": 1000,
+      "permutations": 1000,
+      "test": "two-sided paired sign-flip (Monte Carlo)",
+      "multiplicity_adjustment": "none; exploratory"
+    },
+    {
+      "kind": "retriever",
+      "baseline": "tfidf",
+      "candidate": "bm25",
+      "condition": "hinglish",
+      "metric": "recall",
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "confidence": 0.95,
+      "p_value": 1.0,
+      "n_pairs": 8,
+      "seed": 42,
+      "resamples": 1000,
+      "permutations": 1000,
+      "test": "two-sided paired sign-flip (Monte Carlo)",
+      "multiplicity_adjustment": "none; exploratory"
+    },
+    {
+      "kind": "retriever",
+      "baseline": "tfidf",
+      "candidate": "bm25",
+      "condition": "hinglish",
+      "metric": "hit_rate",
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "confidence": 0.95,
+      "p_value": 1.0,
+      "n_pairs": 8,
+      "seed": 42,
+      "resamples": 1000,
+      "permutations": 1000,
+      "test": "two-sided paired sign-flip (Monte Carlo)",
+      "multiplicity_adjustment": "none; exploratory"
+    },
+    {
+      "kind": "retriever",
+      "baseline": "tfidf",
+      "candidate": "bm25",
+      "condition": "hinglish",
+      "metric": "mrr",
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "confidence": 0.95,
+      "p_value": 1.0,
+      "n_pairs": 8,
+      "seed": 42,
+      "resamples": 1000,
+      "permutations": 1000,
+      "test": "two-sided paired sign-flip (Monte Carlo)",
+      "multiplicity_adjustment": "none; exploratory"
+    },
+    {
+      "kind": "retriever",
+      "baseline": "tfidf",
+      "candidate": "bm25",
+      "condition": "hinglish",
+      "metric": "map",
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "confidence": 0.95,
+      "p_value": 1.0,
+      "n_pairs": 8,
+      "seed": 42,
+      "resamples": 1000,
+      "permutations": 1000,
+      "test": "two-sided paired sign-flip (Monte Carlo)",
+      "multiplicity_adjustment": "none; exploratory"
+    },
+    {
+      "kind": "retriever",
+      "baseline": "tfidf",
+      "candidate": "bm25",
+      "condition": "hinglish",
+      "metric": "ndcg",
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "confidence": 0.95,
+      "p_value": 1.0,
+      "n_pairs": 8,
+      "seed": 42,
+      "resamples": 1000,
+      "permutations": 1000,
+      "test": "two-sided paired sign-flip (Monte Carlo)",
+      "multiplicity_adjustment": "none; exploratory"
+    },
+    {
+      "kind": "retriever",
+      "baseline": "tfidf",
+      "candidate": "bm25",
+      "condition": "hinglish_typo",
+      "metric": "precision",
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "confidence": 0.95,
+      "p_value": 1.0,
+      "n_pairs": 8,
+      "seed": 42,
+      "resamples": 1000,
+      "permutations": 1000,
+      "test": "two-sided paired sign-flip (Monte Carlo)",
+      "multiplicity_adjustment": "none; exploratory"
+    },
+    {
+      "kind": "retriever",
+      "baseline": "tfidf",
+      "candidate": "bm25",
+      "condition": "hinglish_typo",
+      "metric": "recall",
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "confidence": 0.95,
+      "p_value": 1.0,
+      "n_pairs": 8,
+      "seed": 42,
+      "resamples": 1000,
+      "permutations": 1000,
+      "test": "two-sided paired sign-flip (Monte Carlo)",
+      "multiplicity_adjustment": "none; exploratory"
+    },
+    {
+      "kind": "retriever",
+      "baseline": "tfidf",
+      "candidate": "bm25",
+      "condition": "hinglish_typo",
+      "metric": "hit_rate",
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "confidence": 0.95,
+      "p_value": 1.0,
+      "n_pairs": 8,
+      "seed": 42,
+      "resamples": 1000,
+      "permutations": 1000,
+      "test": "two-sided paired sign-flip (Monte Carlo)",
+      "multiplicity_adjustment": "none; exploratory"
+    },
+    {
+      "kind": "retriever",
+      "baseline": "tfidf",
+      "candidate": "bm25",
+      "condition": "hinglish_typo",
+      "metric": "mrr",
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "confidence": 0.95,
+      "p_value": 1.0,
+      "n_pairs": 8,
+      "seed": 42,
+      "resamples": 1000,
+      "permutations": 1000,
+      "test": "two-sided paired sign-flip (Monte Carlo)",
+      "multiplicity_adjustment": "none; exploratory"
+    },
+    {
+      "kind": "retriever",
+      "baseline": "tfidf",
+      "candidate": "bm25",
+      "condition": "hinglish_typo",
+      "metric": "map",
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "confidence": 0.95,
+      "p_value": 1.0,
+      "n_pairs": 8,
+      "seed": 42,
+      "resamples": 1000,
+      "permutations": 1000,
+      "test": "two-sided paired sign-flip (Monte Carlo)",
+      "multiplicity_adjustment": "none; exploratory"
+    },
+    {
+      "kind": "retriever",
+      "baseline": "tfidf",
+      "candidate": "bm25",
+      "condition": "hinglish_typo",
+      "metric": "ndcg",
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "confidence": 0.95,
+      "p_value": 1.0,
+      "n_pairs": 8,
+      "seed": 42,
+      "resamples": 1000,
+      "permutations": 1000,
+      "test": "two-sided paired sign-flip (Monte Carlo)",
+      "multiplicity_adjustment": "none; exploratory"
+    },
+    {
+      "kind": "retriever",
+      "baseline": "tfidf",
+      "candidate": "bm25",
+      "condition": "romanized_hindi",
+      "metric": "precision",
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "confidence": 0.95,
+      "p_value": 1.0,
+      "n_pairs": 8,
+      "seed": 42,
+      "resamples": 1000,
+      "permutations": 1000,
+      "test": "two-sided paired sign-flip (Monte Carlo)",
+      "multiplicity_adjustment": "none; exploratory"
+    },
+    {
+      "kind": "retriever",
+      "baseline": "tfidf",
+      "candidate": "bm25",
+      "condition": "romanized_hindi",
+      "metric": "recall",
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "confidence": 0.95,
+      "p_value": 1.0,
+      "n_pairs": 8,
+      "seed": 42,
+      "resamples": 1000,
+      "permutations": 1000,
+      "test": "two-sided paired sign-flip (Monte Carlo)",
+      "multiplicity_adjustment": "none; exploratory"
+    },
+    {
+      "kind": "retriever",
+      "baseline": "tfidf",
+      "candidate": "bm25",
+      "condition": "romanized_hindi",
+      "metric": "hit_rate",
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "confidence": 0.95,
+      "p_value": 1.0,
+      "n_pairs": 8,
+      "seed": 42,
+      "resamples": 1000,
+      "permutations": 1000,
+      "test": "two-sided paired sign-flip (Monte Carlo)",
+      "multiplicity_adjustment": "none; exploratory"
+    },
+    {
+      "kind": "retriever",
+      "baseline": "tfidf",
+      "candidate": "bm25",
+      "condition": "romanized_hindi",
+      "metric": "mrr",
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "confidence": 0.95,
+      "p_value": 1.0,
+      "n_pairs": 8,
+      "seed": 42,
+      "resamples": 1000,
+      "permutations": 1000,
+      "test": "two-sided paired sign-flip (Monte Carlo)",
+      "multiplicity_adjustment": "none; exploratory"
+    },
+    {
+      "kind": "retriever",
+      "baseline": "tfidf",
+      "candidate": "bm25",
+      "condition": "romanized_hindi",
+      "metric": "map",
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "confidence": 0.95,
+      "p_value": 1.0,
+      "n_pairs": 8,
+      "seed": 42,
+      "resamples": 1000,
+      "permutations": 1000,
+      "test": "two-sided paired sign-flip (Monte Carlo)",
+      "multiplicity_adjustment": "none; exploratory"
+    },
+    {
+      "kind": "retriever",
+      "baseline": "tfidf",
+      "candidate": "bm25",
+      "condition": "romanized_hindi",
+      "metric": "ndcg",
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "confidence": 0.95,
+      "p_value": 1.0,
+      "n_pairs": 8,
+      "seed": 42,
+      "resamples": 1000,
+      "permutations": 1000,
+      "test": "two-sided paired sign-flip (Monte Carlo)",
+      "multiplicity_adjustment": "none; exploratory"
+    }
+  ]
+}

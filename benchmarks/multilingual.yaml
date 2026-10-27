@@ -1,0 +1,26 @@
+documents: data/documents.csv
+queries: data/queries.csv
+dataset: data/manifest.json
+k: 3
+seed: 42
+resamples: 1000
+permutations: 1000
+confidence: 0.95
+retrievers:
+  - name: tfidf
+  - name: bm25
+  - name: dense
+    model_name: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+    revision: e8f8c211226b894fcb81acc59f3b34ba3efd5f42
+    allow_download: false  # explicitly set true to download
+    batch_size: 32
+    device: cpu
+perturbations:
+  - transformation: typo
+    intensity: 0.15
+    source_condition: english
+  - transformation: typo
+    intensity: 0.15
+    source_condition: hinglish
+output: ../results/multilingual.json
+report: ../reports/multilingual

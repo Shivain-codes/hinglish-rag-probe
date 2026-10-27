@@ -1,0 +1,34 @@
+{
+  "python": "3.11.15 (main, Mar 20 2026, 00:41:54) [Clang 22.1.1 ]",
+  "dependencies": {
+    "hinglish-rag-probe": "0.1.0",
+    "numpy": "2.4.6",
+    "scikit-learn": "1.9.1",
+    "PyYAML": "6.0.3",
+    "sentence-transformers": "6.2.0",
+    "torch": "2.14.1",
+    "faiss-cpu": "1.15.1",
+    "matplotlib": "3.11.2"
+  },
+  "platform": "macOS-15.7.4-arm64-arm-64bit",
+  "machine": "arm64",
+  "processor": "arm",
+  "timestamp_utc": "2026-10-26T16:23:55.551964+00:00",
+  "retriever": {
+    "name": "tfidf",
+    "tokenizer": "unicode_NFC_casefold_v1",
+    "norm": "l2"
+  },
+  "index_seconds": 0.002375999989453703,
+  "batch_seconds": [
+    0.005727167008444667,
+    0.0056730000069364905,
+    0.005708999990019947,
+    0.005677207955159247,
+    0.005686874967068434
+  ],
+  "n_queries": 32,
+  "median_queries_per_second": 5626.992009725141,
+  "process_lifetime_peak_rss_bytes": 113950720,
+  "scope": "fresh-process lifetime RSS including imports; one batch warmup; no GPU memory"
+}

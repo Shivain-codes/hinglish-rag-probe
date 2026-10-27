@@ -1,0 +1,9 @@
+{
+  "name": "HinglishRAGProbe synthetic demonstration",
+  "source": "Generated locally for software validation; no external corpus",
+  "license": "MIT (bundled example data)",
+  "version": "1",
+  "synthetic": true,
+  "human_reviewed": false,
+  "relevance_definition": "One positive document per query, assigned while constructing the synthetic example; other documents treated as nonrelevant."
+}

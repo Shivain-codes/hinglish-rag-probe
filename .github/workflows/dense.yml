@@ -1,0 +1,20 @@
+name: Optional real model integration
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  dense:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install -e '.[dev,dense,faiss,reports]'
+      - run: pytest tests/test_retrieval.py -v
+        env:
+          HRAG_TEST_MODEL: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+          HRAG_TEST_REVISION: e8f8c211226b894fcb81acc59f3b34ba3efd5f42
+          HRAG_ALLOW_DOWNLOAD: '1'
+          OMP_NUM_THREADS: '1'

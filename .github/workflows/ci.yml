@@ -1,0 +1,48 @@
+name: CI
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.10', '3.11', '3.12', '3.13']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m pip install -e '.[dev,reports]'
+      - run: ruff check . && ruff format --check .
+      - run: mypy src/hinglish_rag_probe
+      - run: pytest --cov=hinglish_rag_probe --cov-report=xml --cov-report=term-missing
+      - run: hragprobe compare --config benchmarks/sparse.yaml
+      - run: python -m build && python -m twine check dist/*
+      - run: |
+          python -m venv /tmp/wheel-test
+          /tmp/wheel-test/bin/pip install dist/*.whl
+          /tmp/wheel-test/bin/hragprobe --help
+          /tmp/wheel-test/bin/python examples/quickstart.py
+          python -m venv /tmp/sdist-test
+          /tmp/sdist-test/bin/pip install dist/*.tar.gz
+          /tmp/sdist-test/bin/hragprobe --help
+      - uses: actions/upload-artifact@v4
+        with:
+          name: validation-${{ matrix.python }}
+          path: |
+            coverage.xml
+            dist/
+            results/
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install -e '.[reports]' pip-audit
+      - run: pip-audit --skip-editable

@@ -1,0 +1,20 @@
+documents: data/documents.csv
+queries: data/queries.csv
+dataset: data/manifest.json
+k: 3
+seed: 42
+resamples: 1000
+permutations: 1000
+confidence: 0.95
+retrievers:
+  - name: tfidf
+  - name: bm25
+perturbations:
+  - transformation: typo
+    intensity: 0.15
+    source_condition: english
+  - transformation: typo
+    intensity: 0.15
+    source_condition: hinglish
+output: ../results/comparison.json
+report: ../reports/demo

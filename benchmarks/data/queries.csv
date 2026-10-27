@@ -1,0 +1,9 @@
+id,english,hindi,romanized_hindi,hinglish,relevant_ids,human_validated
+q1,How does photosynthesis work?,प्रकाश संश्लेषण कैसे काम करता है?,prakash sanshleshan kaise kaam karta hai?,Photosynthesis kaise kaam karta hai?,"[""d1""]",false
+q2,What does machine learning do?,मशीन लर्निंग क्या करती है?,machine learning kya karti hai?,Machine learning kya karti hai?,"[""d2""]",false
+q3,At what temperature does water boil?,पानी किस तापमान पर उबलता है?,paani kis taapman par ubalta hai?,Water kis temperature par boil hota hai?,"[""d3""]",false
+q4,What pumps blood in the body?,शरीर में खून कौन पंप करता है?,shareer mein khoon kaun pump karta hai?,Body mein blood kaun pump karta hai?,"[""d4""]",false
+q5,How do solar panels produce electricity?,सौर पैनल बिजली कैसे बनाते हैं?,saur panel bijli kaise banate hain?,Solar panels electricity kaise banate hain?,"[""d5""]",false
+q6,Where can readers borrow books?,पाठक किताबें कहाँ से उधार ले सकते हैं?,pathak kitabein kahan se udhaar le sakte hain?,Readers books kahan se borrow kar sakte hain?,"[""d6""]",false
+q7,How does rain form?,बारिश कैसे बनती है?,baarish kaise banti hai?,Rain kaise form hoti hai?,"[""d7""]",false
+q8,What account earns interest?,किस खाते पर ब्याज मिलता है?,kis khaate par byaaj milta hai?,Kaunsa account interest earn karta hai?,"[""d8""]",false

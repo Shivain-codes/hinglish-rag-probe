@@ -1,0 +1,33 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.10.20, pytest-9.1.1, pluggy-1.7.0
+rootdir: <project>
+configfile: pyproject.toml
+testpaths: tests
+plugins: platformdirs-4.12.4, cov-7.1.0
+collected 56 items
+
+tests/test_evaluation_io_cli.py ................                         [ 28%]
+tests/test_metrics_statistics.py ..............                          [ 53%]
+tests/test_models_perturbations.py ................                      [ 82%]
+tests/test_retrieval.py ...s....ss                                       [100%]
+
+================================ tests coverage ================================
+______________ coverage: platform darwin, python 3.10.20-final-0 _______________
+
+Name                                               Stmts   Miss  Cover   Missing
+--------------------------------------------------------------------------------
+src/hinglish_rag_probe/__init__.py                     4      0   100%
+src/hinglish_rag_probe/cli.py                         95      4    96%   38, 65, 108, 149
+src/hinglish_rag_probe/datasets/__init__.py           82      0   100%
+src/hinglish_rag_probe/evaluation/__init__.py        110      0   100%
+src/hinglish_rag_probe/metrics/__init__.py            24      0   100%
+src/hinglish_rag_probe/models.py                      88      0   100%
+src/hinglish_rag_probe/perturbations/__init__.py      42      2    95%   69-70
+src/hinglish_rag_probe/reporting/__init__.py          88      3    97%   18-19, 143
+src/hinglish_rag_probe/retrieval/__init__.py         138      8    94%   56, 61, 190-191, 201, 203-205
+src/hinglish_rag_probe/statistics/__init__.py         25      0   100%
+src/hinglish_rag_probe/utils/__init__.py               0      0   100%
+--------------------------------------------------------------------------------
+TOTAL                                                696     17    98%
+Required test coverage of 85.0% reached. Total coverage: 97.56%
+======================== 53 passed, 3 skipped in 3.77s =========================
