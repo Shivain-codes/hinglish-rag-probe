@@ -108,3 +108,17 @@ fails on these missing fields. Remote CI and protected Trusted Publishers must
 be configured, name availability rechecked, TestPyPI validated and explicit
 publication approval obtained. See docs/RELEASE.md for separate package and paper
 checklists. Twine validation alone does not complete these gates.
+
+## Publication identity update — 2026-10-27
+
+The user confirmed Shivain Gupta as author and copyright holder and approved
+the MIT license. CITATION.cff, LICENSE and package metadata now reflect that
+confirmation. This supersedes the missing-identity gate in the historical
+validation record above. No PyPI/TestPyPI upload is implied by this update.
+
+The updated CFF passes cffconvert schema 1.2.0 validation. Identity/version
+preflight, Ruff and isolated wheel/sdist builds with Twine checks pass.
+The first remote CI run passed its package test jobs but the security audit
+found vulnerabilities in the runner's preinstalled setuptools 79.0.1.
+The audit job now upgrades setuptools to at least 84.1.0 before auditing,
+using the fix version reported by pip-audit; no vulnerability is ignored.

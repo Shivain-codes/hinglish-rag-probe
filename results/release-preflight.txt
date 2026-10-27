@@ -1,3 +1,1 @@
-Supply verified authors in CITATION.cff and validate its schema.
-Supply the actual repository-code URL in CITATION.cff.
-Supply the verified copyright holder in LICENSE.
+Identity/version preflight passed; complete the release checklist before publishing.

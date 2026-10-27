@@ -5,9 +5,9 @@ indicates no project record at that time, not guaranteed availability or reserva
 Repeat immediately before publishing; normalized name collisions/reservations can
 still prevent registration. Nothing has been uploaded or pushed.
 
-`python scripts/release_preflight.py` currently fails intentionally on missing identity
-metadata. The publishing workflow enforces this gate; the CI test/build workflow
-can still validate the software.
+Author and copyright holder Shivain Gupta and the MIT license were confirmed
+on 2026-10-27. The repository URL is recorded in CITATION.cff and pyproject.toml.
+The publishing workflow enforces `python scripts/release_preflight.py`.
 
 1. Supply verified author/maintainer details, repository URL and copyright holder.
    Confirm MIT license choice and complete LICENSE's copyright notice. Complete

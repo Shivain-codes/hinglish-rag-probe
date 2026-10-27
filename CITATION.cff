@@ -1,9 +1,10 @@
 cff-version: 1.2.0
-message: "Citation metadata is provisional. Supply verified authors before package publication."
+message: "If you use HinglishRAGProbe, please cite this software."
 title: "HinglishRAGProbe"
 version: 0.1.0
 type: software
 license: MIT
-# Required authors intentionally omitted until identities are supplied.
-# This template is not yet a schema-valid final citation record.
+authors:
+  - family-names: Gupta
+    given-names: Shivain
 repository-code: "https://github.com/Shivain-codes/hinglish-rag-probe"

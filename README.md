@@ -158,5 +158,5 @@ python -m twine check dist/*
 See [CONTRIBUTING.md](CONTRIBUTING.md), [release instructions](docs/RELEASE.md),
 [CITATION.cff](CITATION.cff) and [paper draft](research/paper/manuscript.md).
 Source repository: [https://github.com/Shivain-codes/hinglish-rag-probe](https://github.com/Shivain-codes/hinglish-rag-probe).
-Author identities for formal citation have not yet been confirmed. Set verified citation
-metadata before publication; no author names or affiliations are invented here.
+Author and copyright holder: **Shivain Gupta**. Licensed under MIT.
+Use the metadata in CITATION.cff to cite the software.

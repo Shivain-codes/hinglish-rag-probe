@@ -5,6 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "hinglish-rag-probe"
 version = "0.1.0"
+authors = [{name = "Shivain Gupta"}]
 description = "Reproducible retrieval robustness evaluation for Hindi, English and Hinglish"
 readme = "README.md"
 requires-python = ">=3.10"

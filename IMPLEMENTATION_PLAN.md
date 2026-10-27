@@ -20,7 +20,7 @@ No uploads, releases or manuscript submissions are authorized. Synthetic example
 - [x] Tests, lint, types, dependency lock/audit, builds and installation checks
 - [x] Verified-reference manuscript draft and human-review protocol
 - [x] CI and protected-environment Trusted Publishing preparation
-- [ ] User-provided publication identity/copyright/citation metadata
+- [x] User-provided publication identity/copyright/citation metadata (2026-10-27)
 - [ ] Remote CI, TestPyPI/PyPI and manuscript submission (not authorized)
 - [ ] Human-reviewed benchmark and confirmatory research experiments
 
